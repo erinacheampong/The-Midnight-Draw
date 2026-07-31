@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,10 +12,7 @@
       box-sizing: border-box;
     }
 
-    html {
-      background: #050407;
-    }
-
+    html,
     body {
       margin: 0;
       background: #050407;
@@ -22,14 +20,24 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    img {
+    main {
+      width: 100%;
+    }
+
+    .site-design {
+      display: block;
+      width: 100%;
+      line-height: 0;
+    }
+
+    .site-design img {
       display: block;
       width: 100%;
       height: auto;
     }
 
     .booking {
-      padding: 50px 20px 60px;
+      padding: 35px 20px 45px;
       text-align: center;
       background: #050407;
     }
@@ -45,13 +53,8 @@
       font-size: 13px;
     }
 
-    .booking a:hover {
-      background: #f4efe8;
-      color: #050407;
-    }
-
     footer {
-      padding: 25px 20px 40px;
+      padding: 20px 20px 40px;
       text-align: center;
       background: #050407;
       color: #c8beb2;
@@ -68,15 +71,18 @@
 <body>
 
   <main>
-    <img
-      src="midnight-draw-2.png"
-      alt="The Midnight Draw intuitive tarot readings"
+    <a
+      class="site-design"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdqI_BsCOU35TDAajJOIOAgf1tnV3roDa6oxRInF-iEAnyklg/viewform"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Open The Midnight Draw booking inquiry form"
     >
-
-    <img
-      src="midnight-draw-2 (1).png"
-      alt="The Midnight Draw event tarot experience"
-    >
+      <img
+        src="midnight-draw-2.png"
+        alt="The Midnight Draw intuitive tarot readings for events"
+      >
+    </a>
 
     <section class="booking">
       <a
