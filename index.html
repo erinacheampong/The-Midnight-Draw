@@ -35,21 +35,39 @@
       .mobile-site{display:block;background:var(--black)}
       .wrap{width:min(100% - 32px,620px);margin:0 auto}
       .hero{
-        min-height:720px;
-        padding:28px 0 58px;
-        background:
-          linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.35) 45%,rgba(0,0,0,.94)),
-          url("mobile-hero.jpg") 64% 110px/auto 420px no-repeat,
-          var(--black);
-        display:flex;
-        align-items:flex-end;
+        padding:0 0 58px;
+        background:var(--black);
+      }
+      .mobile-visual{
+        position:relative;
+        width:100%;
+        height:390px;
+        overflow:hidden;
+        background:#070707;
+      }
+      .mobile-visual::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:url("mobile-hero.jpg") center center/cover no-repeat;
       }
       .mobile-logo{
+        position:absolute;
+        top:34px;
+        left:50%;
+        z-index:2;
         display:block;
-        width:148px;
-        max-width:46vw;
+        width:132px;
+        max-width:40vw;
         height:auto;
-        margin:0 auto 22px;
+        margin:0;
+        transform:translateX(-50%);
+      }
+      .hero-copy{
+        padding-top:38px;
+      }
+      .hero .kicker{
+        display:none;
       }
       .kicker{
         margin:0 0 12px;
@@ -126,9 +144,10 @@
 
   <main class="mobile-site">
     <section class="hero">
-      <div class="wrap">
+      <div class="mobile-visual">
         <img class="mobile-logo" src="mobile-logo.png" alt="The Midnight Draw Tarot Readings logo">
-        <p class="kicker">The Midnight Draw</p>
+      </div>
+      <div class="wrap hero-copy">
         <h1>Bring a little magic to your gathering.</h1>
         <p>Thoughtful tarot readings for private events, girls nights, and themed gatherings. Personal, reflective, and designed to feel like part of the evening.</p>
         <a class="button"
