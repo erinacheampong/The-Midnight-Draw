@@ -3,13 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>The Midnight Draw | Intuitive Tarot for Events</title>
-
-  <meta
-    name="description"
-    content="Intuitive tarot readings for celebrations, gatherings, and private events throughout Southern California."
-  >
+  <meta name="description" content="Intuitive tarot readings for celebrations, gatherings, and private events throughout Southern California.">
 
   <style>
     :root {
@@ -18,12 +13,10 @@
       --taupe: #b4a38f;
       --sage: #6f7669;
       --soft-black: #151515;
-      --line: rgba(243, 238, 231, 0.24);
+      --line: rgba(243, 238, 231, 0.22);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
@@ -44,9 +37,7 @@
       max-width: 100%;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
 
     .container {
       width: min(1160px, calc(100% - 40px));
@@ -55,8 +46,7 @@
 
     .site-header {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0 0 auto 0;
       z-index: 10;
       width: 100%;
       padding: 24px 0;
@@ -81,14 +71,14 @@
       min-height: 52px;
       padding: 14px 24px;
       border: 1px solid var(--taupe);
-      background: transparent;
+      background: rgba(8, 8, 8, 0.82);
       color: var(--cream);
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.14em;
       font-size: 13px;
       line-height: 1.2;
-      transition: 0.2s ease;
+      transition: background 0.2s ease, color 0.2s ease;
     }
 
     .button:hover,
@@ -96,10 +86,6 @@
       background: var(--cream);
       color: var(--black);
       outline: none;
-    }
-
-    .button-dark {
-      background: var(--black);
     }
 
     .hero {
@@ -111,10 +97,10 @@
       background:
         linear-gradient(
           90deg,
-          rgba(0, 0, 0, 0.88) 0%,
+          rgba(0, 0, 0, 0.9) 0%,
           rgba(0, 0, 0, 0.68) 42%,
-          rgba(0, 0, 0, 0.2) 75%,
-          rgba(0, 0, 0, 0.32) 100%
+          rgba(0, 0, 0, 0.18) 76%,
+          rgba(0, 0, 0, 0.28) 100%
         ),
         url("hero-hands.png") center right / cover no-repeat;
     }
@@ -135,9 +121,7 @@
       font-weight: 700;
     }
 
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       margin-top: 0;
       font-family: Georgia, "Times New Roman", serif;
       font-weight: 400;
@@ -145,7 +129,6 @@
     }
 
     h1 {
-      max-width: 720px;
       margin-bottom: 26px;
       font-size: clamp(48px, 7vw, 88px);
     }
@@ -167,9 +150,7 @@
       font-size: clamp(18px, 2vw, 22px);
     }
 
-    .section {
-      padding: 100px 0;
-    }
+    .section { padding: 100px 0; }
 
     .intro {
       background: var(--cream);
@@ -183,7 +164,8 @@
       gap: 70px;
     }
 
-    .intro-image {
+    .intro-image,
+    .offerings-image {
       width: 100%;
       min-height: 620px;
       object-fit: cover;
@@ -195,9 +177,7 @@
       font-size: 19px;
     }
 
-    .expect {
-      background: var(--sage);
-    }
+    .expect { background: var(--sage); }
 
     .expect-heading {
       max-width: 760px;
@@ -222,15 +202,7 @@
       color: rgba(243, 238, 231, 0.9);
     }
 
-    .offerings {
-      background: var(--soft-black);
-    }
-
-    .offerings-image {
-      width: 100%;
-      min-height: 620px;
-      object-fit: cover;
-    }
+    .offerings { background: var(--soft-black); }
 
     .offering-list {
       display: grid;
@@ -243,9 +215,7 @@
       border-bottom: 1px solid var(--line);
     }
 
-    .offering-item:last-child {
-      border-bottom: 0;
-    }
+    .offering-item:last-child { border-bottom: 0; }
 
     .offering-item p {
       margin: 0;
@@ -253,22 +223,25 @@
     }
 
     .booking {
-      position: relative;
-      padding: 120px 0;
+      padding: 110px 0;
       text-align: center;
       background:
-        linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)),
+        linear-gradient(rgba(8, 8, 8, 0.72), rgba(8, 8, 8, 0.78)),
         url("approved-footer.jpg") center / cover no-repeat;
     }
 
-    .booking-content {
-      max-width: 760px;
+    .booking-card {
+      max-width: 780px;
       margin: 0 auto;
+      padding: 54px 34px;
+      border: 1px solid rgba(180, 163, 143, 0.72);
+      background: rgba(8, 8, 8, 0.72);
+      backdrop-filter: blur(3px);
     }
 
-    .booking p {
-      max-width: 650px;
-      margin: 0 auto 34px;
+    .booking-card p {
+      max-width: 620px;
+      margin: 0 auto 32px;
       color: rgba(243, 238, 231, 0.9);
       font-size: 20px;
     }
@@ -286,9 +259,7 @@
       text-decoration: none;
     }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+    footer a:hover { text-decoration: underline; }
 
     @media (max-width: 900px) {
       .site-header {
@@ -310,9 +281,7 @@
         gap: 45px;
       }
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
+      .cards { grid-template-columns: 1fr; }
 
       .intro-image,
       .offerings-image {
@@ -321,9 +290,7 @@
     }
 
     @media (max-width: 600px) {
-      body {
-        font-size: 17px;
-      }
+      body { font-size: 17px; }
 
       .container {
         width: min(100% - 28px, 1160px);
@@ -333,9 +300,7 @@
         align-items: flex-start;
       }
 
-      .logo {
-        width: 145px;
-      }
+      .logo { width: 145px; }
 
       .site-header .button {
         min-height: 44px;
@@ -360,17 +325,10 @@
         padding: 260px 0 58px;
       }
 
-      h1 {
-        font-size: 50px;
-      }
+      h1 { font-size: 50px; }
+      h2 { font-size: 40px; }
 
-      h2 {
-        font-size: 40px;
-      }
-
-      .section {
-        padding: 72px 0;
-      }
+      .section { padding: 72px 0; }
 
       .intro-image,
       .offerings-image {
@@ -382,13 +340,13 @@
         padding: 26px;
       }
 
-      .booking {
-        padding: 86px 0;
+      .booking { padding: 72px 0; }
+
+      .booking-card {
+        padding: 40px 22px;
       }
 
-      .button {
-        width: 100%;
-      }
+      .button { width: 100%; }
     }
   </style>
 </head>
@@ -397,11 +355,7 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <img
-        class="logo"
-        src="logo.png"
-        alt="The Midnight Draw"
-      >
+      <img class="logo" src="logo.png" alt="The Midnight Draw">
 
       <a
         class="button"
@@ -424,13 +378,12 @@
           <h1>Summon a little magic to your gathering.</h1>
 
           <p class="hero-copy">
-            Thoughtful, intuitive tarot readings designed to create
-            memorable moments at celebrations and private events
-            throughout Southern California.
+            Thoughtful, intuitive tarot readings designed to create memorable
+            moments at celebrations and private events throughout Southern California.
           </p>
 
           <a
-            class="button button-dark"
+            class="button"
             href="https://docs.google.com/forms/d/e/1FAIpQLSdqI_BsCOU35TDAajJOIOAgf1tnV3roDa6oxRInF-iEAnyklg/viewform"
             target="_blank"
             rel="noopener noreferrer"
@@ -443,12 +396,7 @@
 
     <section class="section intro">
       <div class="container split">
-
-        <img
-          class="intro-image"
-          src="three-card-hands.jpg"
-          alt="Hands holding tarot cards"
-        >
+        <img class="intro-image" src="three-card-hands.jpg" alt="Hands holding tarot cards">
 
         <div class="intro-copy">
           <p class="eyebrow">The experience</p>
@@ -456,39 +404,36 @@
           <h2>A meaningful moment guests will remember.</h2>
 
           <p>
-            The Midnight Draw brings an elevated and welcoming tarot
-            experience directly to your celebration.
+            The Midnight Draw brings an elevated and welcoming tarot experience
+            directly to your celebration.
           </p>
 
           <p>
-            Each reading offers guests a quiet moment to reflect,
-            reconnect, and receive an intuitive message through the cards.
+            Each reading offers guests a quiet moment to reflect, reconnect,
+            and receive an intuitive message through the cards.
           </p>
 
           <p>
-            Readings are approached as a reflective tool for journaling,
-            prayer, choices, and personal insight rather than fortune telling.
+            Readings are approached as a reflective tool for journaling, prayer,
+            choices, and personal insight rather than fortune telling.
           </p>
         </div>
-
       </div>
     </section>
 
     <section class="section expect">
       <div class="container">
-
         <div class="expect-heading">
           <p class="eyebrow">What to expect</p>
           <h2>Personal, polished, and naturally engaging.</h2>
         </div>
 
         <div class="cards">
-
           <article class="card">
             <h3>Intuitive Readings</h3>
             <p>
-              Individual readings shaped around the guest’s energy,
-              question, or intention in the moment.
+              Individual readings shaped around the guest’s energy, question,
+              or intention in the moment.
             </p>
           </article>
 
@@ -507,20 +452,17 @@
               reflective, and grounded.
             </p>
           </article>
-
         </div>
       </div>
     </section>
 
     <section class="section offerings">
       <div class="container split">
-
         <div>
           <p class="eyebrow">Offerings</p>
           <h2>Tarot readings for celebrations and gatherings.</h2>
 
           <div class="offering-list">
-
             <div class="offering-item">
               <h3>Private Events</h3>
               <p>
@@ -544,40 +486,34 @@
                 and seasonal event concepts.
               </p>
             </div>
-
           </div>
         </div>
 
-        <img
-          class="offerings-image"
-          src="cta_right.png"
-          alt="Tarot cards styled for an event"
-        >
-
+        <img class="offerings-image" src="cta_right.png" alt="Tarot cards styled for an event">
       </div>
     </section>
 
     <section class="booking">
-      <div class="container booking-content">
+      <div class="container">
+        <div class="booking-card">
+          <p class="eyebrow">Now booking</p>
 
-        <p class="eyebrow">Now booking</p>
+          <h2>Bring The Midnight Draw to your next event.</h2>
 
-        <h2>Bring The Midnight Draw to your next event.</h2>
+          <p>
+            Share a few details about your gathering and begin planning
+            a thoughtful tarot experience for your guests.
+          </p>
 
-        <p>
-          Share a few details about your gathering and begin planning
-          a thoughtful tarot experience for your guests.
-        </p>
-
-        <a
-          class="button button-dark"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdqI_BsCOU35TDAajJOIOAgf1tnV3roDa6oxRInF-iEAnyklg/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Submit a Booking Inquiry
-        </a>
-
+          <a
+            class="button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdqI_BsCOU35TDAajJOIOAgf1tnV3roDa6oxRInF-iEAnyklg/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Submit a Booking Inquiry
+          </a>
+        </div>
       </div>
     </section>
 
