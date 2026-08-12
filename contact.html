@@ -14,12 +14,10 @@
   <style>
     :root {
       --cream: #f5f0e6;
-      --cream-deep: #eee5d7;
       --black: #09080b;
       --gold: #b49356;
       --text: #171417;
       --muted: #746d65;
-      --line: rgba(23, 20, 23, 0.17);
     }
 
     * {
@@ -120,42 +118,33 @@
     .contact-hero-inner {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 88px 5% 82px;
+      padding: 82px 5%;
       display: grid;
-      grid-template-columns: 1fr 0.8fr;
+      grid-template-columns: 1fr 0.9fr;
       gap: 70px;
       align-items: center;
     }
 
-    .contact-kicker {
-      margin: 0 0 14px;
-      color: var(--gold);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-    }
-
     .contact-title {
       margin: 0;
-      max-width: 650px;
-      font-size: clamp(48px, 6vw, 84px);
-      line-height: 1;
+      max-width: 620px;
+      font-size: clamp(46px, 6vw, 78px);
+      line-height: 1.05;
       font-weight: normal;
       letter-spacing: -0.025em;
     }
 
     .contact-copy {
-      margin: 28px 0 0;
-      max-width: 560px;
+      margin-top: 24px;
+      max-width: 500px;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 16px;
-      line-height: 1.75;
+      line-height: 1.7;
       color: rgba(245, 240, 230, 0.82);
     }
 
     .contact-copy p {
-      margin: 0 0 12px;
+      margin: 0;
     }
 
     .contact-visual {
@@ -185,9 +174,9 @@
     }
 
     /*
-      When your approved Contact image is ready,
+      When the approved Contact image is ready,
       upload it as contact-hero.png and replace
-      the contact-visual styles above with:
+      .contact-visual above with:
 
       .contact-visual {
         min-height: 390px;
@@ -196,7 +185,7 @@
         background: url("contact-hero.png") center center / cover no-repeat;
       }
 
-      Then remove .contact-visual::before
+      Then delete the .contact-visual::before block.
     */
 
     /* FORM */
@@ -208,26 +197,18 @@
     .contact-container {
       max-width: 1050px;
       margin: 0 auto;
-      padding: 92px 5% 100px;
+      padding: 86px 5% 100px;
     }
 
     .form-intro {
       margin-bottom: 42px;
+      text-align: center;
     }
 
     .form-intro h2 {
       margin: 0;
-      font-size: clamp(34px, 4vw, 52px);
+      font-size: clamp(34px, 4vw, 50px);
       font-weight: normal;
-    }
-
-    .form-intro p {
-      margin: 14px 0 0;
-      max-width: 620px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 14px;
-      line-height: 1.7;
-      color: var(--muted);
     }
 
     .inquiry-form {
@@ -309,11 +290,12 @@
     }
 
     .submit-button {
-      width: fit-content;
+      display: block;
+      margin: 8px auto 0;
       border: 1px solid var(--gold);
       background: var(--black);
       color: var(--cream);
-      padding: 15px 28px;
+      padding: 15px 30px;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 11px;
       letter-spacing: 0.14em;
@@ -485,20 +467,13 @@
       <div class="contact-hero-inner">
 
         <div>
-          <p class="contact-kicker">The Midnight Draw</p>
-
           <h1 class="contact-title">
-            Inquire About Your Event
+            Let’s bring a little magic to your next gathering.
           </h1>
 
           <div class="contact-copy">
             <p>
-              Bring a thoughtful, intuitive tarot experience to your gathering.
-            </p>
-
-            <p>
-              Share a few details below and I’ll be in touch to learn more about
-              your event and availability.
+              Tell me a little about your event and I’ll be in touch soon.
             </p>
           </div>
         </div>
@@ -517,10 +492,7 @@
       <div class="contact-container">
 
         <div class="form-intro">
-          <h2>Tell Me About Your Event</h2>
-          <p>
-            Complete the form below and I’ll follow up with availability and next steps.
-          </p>
+          <h2>Inquire About Your Event</h2>
         </div>
 
         <form
