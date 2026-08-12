@@ -151,42 +151,8 @@
       min-height: 390px;
       border: 1px solid rgba(180, 147, 86, 0.42);
       overflow: hidden;
-      background:
-        radial-gradient(
-          circle at 50% 50%,
-          rgba(180, 147, 86, 0.12),
-          transparent 58%
-        ),
-        #111014;
-      position: relative;
+      background: url("contact-hero.png") center center / cover no-repeat;
     }
-
-    .contact-visual::before {
-      content: "CONTACT IMAGE";
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      color: rgba(245, 240, 230, 0.28);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 10px;
-      letter-spacing: 0.28em;
-    }
-
-    /*
-      When the approved Contact image is ready,
-      upload it as contact-hero.png and replace
-      .contact-visual above with:
-
-      .contact-visual {
-        min-height: 390px;
-        border: 1px solid rgba(180, 147, 86, 0.42);
-        overflow: hidden;
-        background: url("contact-hero.png") center center / cover no-repeat;
-      }
-
-      Then delete the .contact-visual::before block.
-    */
 
     /* FORM */
 
@@ -481,13 +447,13 @@
         <div
           class="contact-visual"
           role="img"
-          aria-label="Tarot reading with deep brown hands"
+          aria-label="Tarot cards arranged by deep brown hands"
         ></div>
 
       </div>
     </section>
 
-    <!-- FORM -->
+    <!-- INQUIRY FORM -->
     <section class="contact-section">
       <div class="contact-container">
 
@@ -610,7 +576,10 @@
             </div>
 
             <div class="field">
-              <label for="referral">How did you hear about The Midnight Draw?</label>
+              <label for="referral">
+                How did you hear about The Midnight Draw?
+              </label>
+
               <select
                 id="referral"
                 name="referral_source"
@@ -627,9 +596,11 @@
 
             <div class="field full">
               <label for="details">Tell Me About Your Event</label>
+
               <textarea
                 id="details"
                 name="event_details"
+                placeholder="Share any details, theme, or anything else you'd like me to know."
                 required
               ></textarea>
             </div>
