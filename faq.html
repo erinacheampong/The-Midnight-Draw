@@ -151,31 +151,12 @@
       line-height: 1.6;
       color: rgba(245, 240, 230, 0.82);
     }
-
-    .faq-visual {
-      min-height: 390px;
-      border: 1px solid rgba(180, 147, 86, 0.42);
-      overflow: hidden;
-      background:
-        radial-gradient(
-          circle at 50% 50%,
-          rgba(180, 147, 86, 0.12),
-          transparent 58%
-        ),
-        #111014;
-      position: relative;
-    }
-
-    .faq-visual::before {
-      content: "FAQ IMAGE";
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      color: rgba(245, 240, 230, 0.28);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 10px;
-      letter-spacing: 0.28em;
+.faq-visual {
+  min-height: 390px;
+  border: 1px solid rgba(180, 147, 86, 0.42);
+  overflow: hidden;
+  background: url("faq-hero.png") center center / cover no-repeat;
+}
     }
 
     /*
