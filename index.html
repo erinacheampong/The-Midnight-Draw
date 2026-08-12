@@ -3,745 +3,125 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta
-    name="description"
-    content="The Midnight Draw offers thoughtful, intuitive tarot readings for private celebrations, seasonal gatherings, markets, special events, and brand activations in Southern California."
-  >
-
+  <meta name="description" content="Thoughtful, intuitive tarot readings for gatherings and events throughout Southern California.">
   <title>The Midnight Draw | Tarot Readings</title>
-
-  <style>
-    :root {
-      --cream: #f5f0e6;
-      --cream-deep: #eee5d7;
-      --black: #09080b;
-      --gold: #b49356;
-      --text: #171417;
-      --muted: #746d65;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* UNIVERSAL HEADER */
-
-    .site-header {
-      width: 100%;
-      background: var(--cream);
-      border-bottom: 1px solid rgba(180, 147, 86, 0.25);
-      position: relative;
-      z-index: 20;
-    }
-
-    .header-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 22px 5%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .brand-lockup {
-      color: var(--text);
-      text-decoration: none;
-      line-height: 1;
-    }
-
-    .brand-name {
-      display: block;
-      font-size: 18px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    .brand-subtitle {
-      display: block;
-      margin-top: 7px;
-      font-size: 9px;
-      letter-spacing: 0.34em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .main-nav {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .main-nav a {
-      color: var(--text);
-      text-decoration: none;
-      font-size: 13px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding-bottom: 5px;
-      border-bottom: 1px solid transparent;
-    }
-
-    .main-nav a:hover,
-    .main-nav a:focus-visible,
-    .main-nav a.active {
-      color: var(--gold);
-    }
-
-    .main-nav a.active {
-      border-bottom-color: var(--gold);
-    }
-
-    /* HERO */
-
-    .hero {
-      background: var(--black);
-      color: var(--cream);
-    }
-
-    .hero-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 70px 5%;
-      display: grid;
-      grid-template-columns: 0.85fr 1fr 1.05fr;
-      gap: 46px;
-      align-items: center;
-    }
-
-    .hero-logo img {
-      width: 100%;
-      max-width: 340px;
-      margin: 0 auto;
-    }
-
-    .hero-copy h1 {
-      margin: 0;
-      font-size: clamp(44px, 5vw, 72px);
-      line-height: 1.05;
-      font-weight: normal;
-      letter-spacing: -0.025em;
-    }
-
-    .hero-copy p {
-      margin: 22px 0 0;
-      max-width: 420px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
-      line-height: 1.75;
-      color: rgba(245, 240, 230, 0.84);
-    }
-
-    .hero-cta {
-      display: inline-block;
-      margin-top: 28px;
-      border: 1px solid var(--gold);
-      background: transparent;
-      color: var(--cream);
-      text-decoration: none;
-      padding: 14px 24px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .hero-cta:hover,
-    .hero-cta:focus-visible {
-      background: var(--gold);
-      color: var(--black);
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      max-height: 420px;
-      object-fit: cover;
-    }
-
-    /* ORIGIN */
-
-    .origin {
-      background: var(--cream);
-    }
-
-    .origin-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 70px 5%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .origin-image img {
-      width: 100%;
-      max-height: 390px;
-      object-fit: cover;
-    }
-
-    .eyebrow {
-      margin: 0 0 10px;
-      color: var(--gold);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-    }
-
-    .origin-copy h2,
-    .experience-copy h2,
-    .approach-copy h2 {
-      margin: 0;
-      font-size: clamp(34px, 4vw, 50px);
-      line-height: 1.08;
-      font-weight: normal;
-    }
-
-    .origin-copy p,
-    .experience-copy p,
-    .approach-copy p {
-      margin: 18px 0 0;
-      max-width: 620px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 14px;
-      line-height: 1.75;
-      color: #4d4741;
-    }
-
-    /* EVENT TYPES */
-
-    .event-types {
-      background: var(--black);
-      color: var(--cream);
-      padding: 46px 5% 52px;
-    }
-
-    .event-types-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      margin: 0 0 28px;
-      text-align: center;
-      color: var(--gold);
-      font-size: 14px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: normal;
-    }
-
-    .event-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-    }
-
-    .event-card {
-      padding: 20px 34px;
-      text-align: center;
-      border-right: 1px solid rgba(180, 147, 86, 0.45);
-    }
-
-    .event-card:last-child {
-      border-right: 0;
-    }
-
-    .event-card h3 {
-      margin: 0 0 12px;
-      color: var(--gold);
-      font-size: 19px;
-      font-weight: normal;
-    }
-
-    .event-card p {
-      margin: 0 auto;
-      max-width: 300px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-      line-height: 1.65;
-      color: rgba(245, 240, 230, 0.78);
-    }
-
-    /* EXPERIENCE */
-
-    .experience {
-      background: var(--cream);
-    }
-
-    .experience-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 66px 5%;
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr 0.5fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .experience-image img {
-      max-height: 320px;
-      object-fit: contain;
-      margin: 0 auto;
-    }
-
-    .three-card-key {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      line-height: 1.6;
-      color: #4d4741;
-    }
-
-    .three-card-key div {
-      margin-bottom: 15px;
-    }
-
-    .three-card-key strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--gold);
-      font-size: 10px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    /* APPROACH */
-
-    .approach {
-      background: var(--black);
-      color: var(--cream);
-    }
-
-    .approach-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 62px 5%;
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .approach-image img {
-      width: 100%;
-      max-height: 310px;
-      object-fit: cover;
-    }
-
-    .approach-copy p {
-      color: rgba(245, 240, 230, 0.8);
-    }
-
-    .approach-cta {
-      margin-top: 26px;
-    }
-
-    .approach-cta-text {
-      margin: 0 0 18px;
-      font-size: clamp(26px, 3vw, 40px);
-      line-height: 1.15;
-      font-weight: normal;
-      color: var(--cream);
-    }
-
-    .cta-button {
-      display: inline-block;
-      border: 1px solid var(--gold);
-      background: transparent;
-      color: var(--cream);
-      text-decoration: none;
-      padding: 14px 24px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .cta-button:hover,
-    .cta-button:focus-visible {
-      background: var(--gold);
-      color: var(--black);
-    }
-
-    /* FOOTER */
-
-    .site-footer {
-      background: var(--black);
-      color: var(--cream);
-      text-align: center;
-      padding: 52px 20px 34px;
-      border-top: 1px solid rgba(180, 147, 86, 0.28);
-    }
-
-    .footer-title {
-      margin: 0 0 15px;
-      color: var(--gold);
-      font-size: 12px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      font-weight: normal;
-    }
-
-    .instagram-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--cream);
-      text-decoration: none;
-      font-size: 14px;
-      letter-spacing: 0.04em;
-    }
-
-    .instagram-link:hover,
-    .instagram-link:focus-visible {
-      color: var(--gold);
-    }
-
-    .instagram-icon {
-      width: 16px;
-      height: 16px;
-    }
-
-    .copyright {
-      margin: 30px 0 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 10px;
-      letter-spacing: 0.04em;
-      color: rgba(245, 240, 230, 0.62);
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 950px) {
-      .hero-inner,
-      .origin-inner,
-      .experience-inner,
-      .approach-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-logo img {
-        max-width: 270px;
-      }
-
-      .event-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .event-card {
-        border-right: 0;
-        border-bottom: 1px solid rgba(180, 147, 86, 0.35);
-      }
-
-      .event-card:last-child {
-        border-bottom: 0;
-      }
-
-      .three-card-key {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .header-inner {
-        padding: 18px 20px;
-        gap: 16px;
-      }
-
-      .brand-name {
-        font-size: 13px;
-      }
-
-      .brand-subtitle {
-        font-size: 7px;
-        letter-spacing: 0.25em;
-        margin-top: 5px;
-      }
-
-      .main-nav {
-        gap: 13px;
-      }
-
-      .main-nav a {
-        font-size: 10px;
-        letter-spacing: 0.04em;
-      }
-
-      .hero-inner,
-      .origin-inner,
-      .experience-inner,
-      .approach-inner {
-        padding-left: 22px;
-        padding-right: 22px;
-      }
-
-      .three-card-key {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 430px) {
-      .header-inner {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .main-nav {
-        width: 100%;
-        justify-content: space-between;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand-lockup" href="index.html" aria-label="The Midnight Draw home">
-        <span class="brand-name">The Midnight Draw</span>
-        <span class="brand-subtitle">Tarot Readings</span>
-      </a>
-
-      <nav class="main-nav" aria-label="Main navigation">
-        <a class="active" href="index.html">Home</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-
-    <section class="hero">
-      <div class="hero-inner">
-
-        <div class="hero-logo">
-          <img
-            src="brand-logo.png"
-            alt="The Midnight Draw Tarot Readings"
-          >
-        </div>
-
-        <div class="hero-copy">
-          <h1>Bring a little magic to your gathering.</h1>
-
-          <p>
-            Thoughtful tarot readings for private events, girls nights, and themed gatherings.
-            Personal, reflective, and designed to feel like part of the evening.
-          </p>
-
-          <a class="hero-cta" href="contact.html">
-            Booking Inquiry
-          </a>
-        </div>
-
-        <div class="hero-image">
-          <img
-            src="faq-hero.png"
-            alt="Deep brown hands holding tarot cards"
-          >
-        </div>
-
-      </div>
-    </section>
-
-    <section class="origin">
-      <div class="origin-inner">
-
-        <div class="origin-image">
-          <img
-            src="02-what-to-expect.png"
-            alt="The Midnight Draw reading atmosphere"
-          >
-        </div>
-
-        <div class="origin-copy">
-          <p class="eyebrow">The Origin Of</p>
-
-          <h2>The Midnight Draw</h2>
-
-          <p>
-            The Midnight Draw was created from a lifelong pull toward the unseen.
-          </p>
-
-          <p>
-            Years of studying tarot, intuition, and storytelling shaped a practice that blends ancient wisdom with modern insight. What began as a personal ritual became a way to offer others clarity, reassurance, and a little magic of their own.
-          </p>
-
-          <p>
-            Each reading is a space to pause, reflect, and remember what you already know. It is not about fortune telling. It is about reconnecting with your inner guidance and the strength you carry.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="event-types">
-      <div class="event-types-inner">
-
-        <h2 class="section-title">Readings For Your Gathering</h2>
-
-        <div class="event-grid">
-
-          <article class="event-card">
-            <h3>Private Events</h3>
-            <p>
-              Intuitive readings that add a personal and memorable touch to birthdays, showers, celebrations, and more.
-            </p>
-          </article>
-
-          <article class="event-card">
-            <h3>Girls Nights</h3>
-            <p>
-              A chance to laugh, connect, and discover meaningful insights in a relaxed and supportive space.
-            </p>
-          </article>
-
-          <article class="event-card">
-            <h3>Themed Gatherings</h3>
-            <p>
-              Perfect for seasonal parties, book clubs, witchy nights, and any theme that welcomes a touch of magic.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="experience">
-      <div class="experience-inner">
-
-        <div class="experience-copy">
-          <p class="eyebrow">The Experience</p>
-          <h2>The Three Card Reading</h2>
-
-          <p>
-            We explore the past, present, and future through a classic three card spread.
-            Each card brings insight, perspective, and a moment of connection that feels just right.
-          </p>
-        </div>
-
-        <div class="experience-image">
-          <img
-            src="contact-hero.png"
-            alt="Three card tarot reading"
-          >
-        </div>
-
-        <div class="three-card-key">
-          <div>
-            <strong>Past</strong>
-            Look to where you have been.
-          </div>
-
-          <div>
-            <strong>Present</strong>
-            Understand where you are now.
-          </div>
-
-          <div>
-            <strong>Future</strong>
-            Consider the possibilities ahead of you.
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="approach">
-      <div class="approach-inner">
-
-        <div class="approach-image">
-          <img
-            src="04-booking.png"
-            alt="The Midnight Draw reflective tarot atmosphere"
-          >
-        </div>
-
-        <div class="approach-copy">
-          <p class="eyebrow">A Reflective Approach</p>
-
-          <h2>Intuition without prediction</h2>
-
-          <p>
-            Tarot is a reflective tool, not fortune telling. These readings create space for journaling, intuition, and mindful choices you can trust.
-          </p>
-
-          <div class="approach-cta">
-            <p class="approach-cta-text">
-              Let’s create a meaningful experience your guests will remember.
-            </p>
-
-            <a class="cta-button" href="contact.html">
-              Booking Inquiry
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-
-    <p class="footer-title">Let’s Connect</p>
-
-    <a
-      class="instagram-link"
-      href="https://www.instagram.com/themidnightdraw/"
-      target="_blank"
-      rel="noopener"
-      aria-label="Follow The Midnight Draw on Instagram"
-    >
-      <svg
-        class="instagram-icon"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.6"
-      >
-        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-        <circle cx="12" cy="12" r="4"></circle>
-        <circle cx="17.5" cy="6.5" r="1"></circle>
-      </svg>
-
-      @themidnightdraw
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand-lockup" href="index.html" aria-label="The Midnight Draw home">
+      <span class="brand-name">The Midnight Draw</span>
+      <span class="brand-subtitle">Tarot Readings</span>
     </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+<a href="about.html">About</a>
+<a href="gallery.html">Gallery</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <p class="copyright">
-      © 2026 The Midnight Draw. All rights reserved.
-    </p>
 
-  </footer>
+<main>
+  <section class="home-hero">
+    <div class="home-hero-inner">
+      <div class="home-logo">
+        <img src="assets/images/brand-logo.png" alt="The Midnight Draw Tarot Readings">
+      </div>
+      <div class="home-copy">
+        <h1>Bring a little magic to your gathering.</h1>
+        <p class="body-copy">Thoughtful tarot readings for private events, girls nights, and themed gatherings. Personal, reflective, and designed to feel like part of the evening.</p>
+        <a class="btn" href="contact.html">Booking Inquiry</a>
+      </div>
+      <div class="home-hero-photo">
+        <img src="assets/images/home-hero.jpg" alt="Deep brown hands holding black and gold tarot cards">
+      </div>
+    </div>
+  </section>
 
+  <section class="home-origin">
+    <div class="split">
+      <div class="split-image">
+        <img src="assets/images/home-origin.jpg" alt="Warm tarot-inspired still life">
+      </div>
+      <div class="split-copy">
+        <p class="eyebrow">The Origin Of</p>
+        <h2>The Midnight Draw</h2>
+        <p class="body-copy">The Midnight Draw was created from a lifelong pull toward the unseen.</p>
+        <p class="body-copy">Years of studying tarot, intuition, and storytelling shaped a practice that blends ancient wisdom with modern insight. What began as a personal ritual became a way to offer others clarity, reassurance, and a little magic of their own.</p>
+        <p class="body-copy">Each reading is a space to pause, reflect, and remember what you already know. It is not about fortune telling. It is about reconnecting with your inner guidance and the strength you carry.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="event-band">
+    <div class="event-band-inner">
+      <h2 class="band-title">Readings For Your Gathering</h2>
+      <div class="event-grid">
+        <article class="event-card">
+          <h3>Private Events</h3>
+          <p class="body-copy">Intuitive readings that add a personal and memorable touch to birthdays, showers, celebrations, and more.</p>
+        </article>
+        <article class="event-card">
+          <h3>Girls Nights</h3>
+          <p class="body-copy">A chance to laugh, connect, and discover meaningful insights in a relaxed and supportive space.</p>
+        </article>
+        <article class="event-card">
+          <h3>Themed Gatherings</h3>
+          <p class="body-copy">Perfect for seasonal parties, book clubs, witchy nights, and any theme that welcomes a touch of magic.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="three-card">
+    <div>
+      <p class="eyebrow">The Experience</p>
+      <h2 class="serif-title" style="font-size:clamp(34px,4vw,52px)">The Three Card Reading</h2>
+      <p class="body-copy">We explore the past, present, and future through a classic three card spread. Each card brings insight, perspective, and a moment of connection that feels just right.</p>
+    </div>
+    <div>
+      <img src="assets/images/home-three-card.jpg" alt="Deep brown hands holding three tarot cards">
+    </div>
+    <div class="card-key">
+      <div><strong>Past</strong>Look to where you have been.</div>
+      <div><strong>Present</strong>Understand where you are now.</div>
+      <div><strong>Future</strong>Consider the possibilities ahead of you.</div>
+    </div>
+  </section>
+
+  <section class="reflective">
+    <div class="reflective-inner">
+      <div><img src="assets/images/home-reflective.jpg" alt="Tarot card on black velvet"></div>
+      <div>
+        <p class="eyebrow">A Reflective Approach</p>
+        <h2>Intuition without prediction</h2>
+        <p class="body-copy">Tarot is a reflective tool, not fortune telling. These readings create space for intuition, perspective, and mindful choices you can trust.</p>
+        <p class="closing">Let’s create a meaningful experience your guests will remember.</p>
+        <a class="btn" href="contact.html">Booking Inquiry</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="site-footer">
+  <p class="footer-title">Let’s Connect</p>
+  <a class="instagram-link" href="https://www.instagram.com/themidnightdraw/" target="_blank" rel="noopener" aria-label="Follow The Midnight Draw on Instagram">
+    <svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6">
+      <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+      <circle cx="12" cy="12" r="4"></circle>
+      <circle cx="17.5" cy="6.5" r="1"></circle>
+    </svg>
+    @themidnightdraw
+  </a>
+  <p class="copyright">© 2026 The Midnight Draw. All rights reserved.</p>
+</footer>
+
+<script src="assets/js/site.js"></script>
 </body>
 </html>
