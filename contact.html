@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Inquire about booking The Midnight Draw for tarot readings at private celebrations, seasonal gatherings, markets, special events, and brand activations."
+  >
+
+  <title>Contact | The Midnight Draw</title>
+
+  <style>
+    :root {
+      --cream: #f5f0e6;
+      --cream-deep: #eee5d7;
+      --black: #09080b;
+      --gold: #b49356;
+      --text: #171417;
+      --muted: #746d65;
+      --line: rgba(23, 20, 23, 0.17);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* UNIVERSAL HEADER */
+
+    .site-header {
+      width: 100%;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(180, 147, 86, 0.25);
+      position: relative;
+      z-index: 20;
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 22px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand-lockup {
+      color: var(--text);
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .brand-name {
+      display: block;
+      font-size: 18px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .brand-subtitle {
+      display: block;
+      margin-top: 7px;
+      font-size: 9px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .main-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      color: var(--gold);
+    }
+
+    .main-nav a.active {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    /* CONTACT HERO */
+
+    .contact-hero {
+      background: var(--black);
+      color: var(--cream);
+    }
+
+    .contact-hero-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 88px 5% 82px;
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .contact-kicker {
+      margin: 0 0 14px;
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .contact-title {
+      margin: 0;
+      max-width: 650px;
+      font-size: clamp(48px, 6vw, 84px);
+      line-height: 1;
+      font-weight: normal;
+      letter-spacing: -0.025em;
+    }
+
+    .contact-copy {
+      margin: 28px 0 0;
+      max-width: 560px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: rgba(245, 240, 230, 0.82);
+    }
+
+    .contact-copy p {
+      margin: 0 0 12px;
+    }
+
+    .contact-visual {
+      min-height: 390px;
+      border: 1px solid rgba(180, 147, 86, 0.42);
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(180, 147, 86, 0.12),
+          transparent 58%
+        ),
+        #111014;
+      position: relative;
+    }
+
+    .contact-visual::before {
+      content: "CONTACT IMAGE";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: rgba(245, 240, 230, 0.28);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.28em;
+    }
+
+    /*
+      When your approved Contact image is ready,
+      upload it as contact-hero.png and replace
+      the contact-visual styles above with:
+
+      .contact-visual {
+        min-height: 390px;
+        border: 1px solid rgba(180, 147, 86, 0.42);
+        overflow: hidden;
+        background: url("contact-hero.png") center center / cover no-repeat;
+      }
+
+      Then remove .contact-visual::before
+    */
+
+    /* FORM */
+
+    .contact-section {
+      background: var(--cream);
+    }
+
+    .contact-container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 92px 5% 100px;
+    }
+
+    .form-intro {
+      margin-bottom: 42px;
+    }
+
+    .form-intro h2 {
+      margin: 0;
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: normal;
+    }
+
+    .form-intro p {
+      margin: 14px 0 0;
+      max-width: 620px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .inquiry-form {
+      display: grid;
+      gap: 24px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4f4842;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(23, 20, 23, 0.2);
+      background: rgba(255, 255, 255, 0.42);
+      color: var(--text);
+      padding: 15px 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      border-radius: 0;
+      outline: none;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--gold);
+      background: rgba(255, 255, 255, 0.66);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 2px;
+    }
+
+    .checkbox-row input {
+      width: 16px;
+      height: 16px;
+      margin-top: 2px;
+      accent-color: var(--black);
+    }
+
+    .checkbox-row label {
+      font-size: 12px;
+      line-height: 1.5;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--muted);
+    }
+
+    .submit-button {
+      width: fit-content;
+      border: 1px solid var(--gold);
+      background: var(--black);
+      color: var(--cream);
+      padding: 15px 28px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .submit-button:hover,
+    .submit-button:focus-visible {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* UNIVERSAL FOOTER */
+
+    .site-footer {
+      background: var(--black);
+      color: var(--cream);
+      text-align: center;
+      padding: 52px 20px 34px;
+      border-top: 1px solid rgba(180, 147, 86, 0.28);
+    }
+
+    .footer-title {
+      margin: 0 0 15px;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    .instagram-link:hover,
+    .instagram-link:focus-visible {
+      color: var(--gold);
+    }
+
+    .instagram-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .copyright {
+      margin: 30px 0 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      color: rgba(245, 240, 230, 0.62);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+      .contact-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 42px;
+        padding-top: 65px;
+        padding-bottom: 60px;
+      }
+
+      .contact-visual {
+        min-height: 300px;
+      }
+
+      .contact-container {
+        padding-top: 65px;
+        padding-bottom: 70px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        padding: 18px 20px;
+        gap: 16px;
+      }
+
+      .brand-name {
+        font-size: 13px;
+      }
+
+      .brand-subtitle {
+        font-size: 7px;
+        letter-spacing: 0.25em;
+        margin-top: 5px;
+      }
+
+      .main-nav {
+        gap: 13px;
+      }
+
+      .main-nav a {
+        font-size: 10px;
+        letter-spacing: 0.04em;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .main-nav {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .contact-hero-inner {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .contact-container {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .submit-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- UNIVERSAL HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="brand-lockup" href="index.html" aria-label="The Midnight Draw home">
+        <span class="brand-name">The Midnight Draw</span>
+        <span class="brand-subtitle">Tarot Readings</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="faq.html">FAQ</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- CONTACT HERO -->
+    <section class="contact-hero">
+      <div class="contact-hero-inner">
+
+        <div>
+          <p class="contact-kicker">The Midnight Draw</p>
+
+          <h1 class="contact-title">
+            Inquire About Your Event
+          </h1>
+
+          <div class="contact-copy">
+            <p>
+              Bring a thoughtful, intuitive tarot experience to your gathering.
+            </p>
+
+            <p>
+              Share a few details below and I’ll be in touch to learn more about
+              your event and availability.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="contact-visual"
+          role="img"
+          aria-label="Tarot reading with deep brown hands"
+        ></div>
+
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="contact-section">
+      <div class="contact-container">
+
+        <div class="form-intro">
+          <h2>Tell Me About Your Event</h2>
+          <p>
+            Complete the form below and I’ll follow up with availability and next steps.
+          </p>
+        </div>
+
+        <form
+          class="inquiry-form"
+          action="https://formspree.io/f/xkjwbwgp"
+          method="POST"
+        >
+
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="event-date">Event Date</label>
+              <input
+                id="event-date"
+                name="event_date"
+                type="date"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="event-time">Event Start Time</label>
+              <input
+                id="event-time"
+                name="event_start_time"
+                type="time"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="location">Event Location</label>
+              <input
+                id="location"
+                name="event_location"
+                type="text"
+                placeholder="City or venue"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="event-type">Type of Event</label>
+              <select
+                id="event-type"
+                name="event_type"
+                required
+              >
+                <option value="" selected disabled>Select one</option>
+                <option>Private Celebration (Birthday, Girls Night)</option>
+                <option>Seasonal Gathering</option>
+                <option>Market / Pop Up</option>
+                <option>Special Event</option>
+                <option>Brand Activation / Corporate Event</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="guest-count">Estimated Guest Count</label>
+              <input
+                id="guest-count"
+                name="estimated_guest_count"
+                type="number"
+                min="1"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="reading-time">Requested Reading Time</label>
+              <select
+                id="reading-time"
+                name="requested_reading_time"
+                required
+              >
+                <option value="" selected disabled>Select one</option>
+                <option>2 Hours</option>
+                <option>3 Hours</option>
+                <option>Not Sure Yet</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="referral">How did you hear about The Midnight Draw?</label>
+              <select
+                id="referral"
+                name="referral_source"
+                required
+              >
+                <option value="" selected disabled>Select one</option>
+                <option>Instagram</option>
+                <option>Google</option>
+                <option>Referral</option>
+                <option>Event or Market</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="details">Tell Me About Your Event</label>
+              <textarea
+                id="details"
+                name="event_details"
+                required
+              ></textarea>
+            </div>
+
+          </div>
+
+          <div class="checkbox-row">
+            <input
+              id="acknowledgement"
+              name="acknowledgement"
+              type="checkbox"
+              value="I understand submitting an inquiry does not reserve my date"
+              required
+            >
+
+            <label for="acknowledgement">
+              I understand that submitting an inquiry does not reserve my date.
+            </label>
+          </div>
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Midnight Draw Event Inquiry"
+          >
+
+          <button class="submit-button" type="submit">
+            Send Inquiry
+          </button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- UNIVERSAL FOOTER -->
+  <footer class="site-footer">
+
+    <p class="footer-title">Let’s Connect</p>
+
+    <a
+      class="instagram-link"
+      href="https://www.instagram.com/themidnightdraw/"
+      target="_blank"
+      rel="noopener"
+      aria-label="Follow The Midnight Draw on Instagram"
+    >
+      <svg
+        class="instagram-icon"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+      >
+        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+        <circle cx="12" cy="12" r="4"></circle>
+        <circle cx="17.5" cy="6.5" r="1"></circle>
+      </svg>
+
+      @themidnightdraw
+    </a>
+
+    <p class="copyright">
+      © 2026 The Midnight Draw. All rights reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
