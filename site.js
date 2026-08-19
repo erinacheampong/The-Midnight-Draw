@@ -12,6 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
       outline-offset:3px;
     }
     [hidden]{display:none !important}
+    .footer-legal{margin:18px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:.05em}
+    .footer-legal a{color:rgba(245,240,230,.7);text-decoration:underline;text-underline-offset:3px}
+    .footer-legal a:hover,.footer-legal a:focus-visible{color:#b49356}
+    .form-privacy-note{margin:18px 0 0;color:#69625b;font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.6;text-align:center}
+    .form-privacy-note a{text-underline-offset:3px}
     @media (prefers-reduced-motion: reduce){
       html{scroll-behavior:auto !important}
       *,*::before,*::after{transition:none !important;animation:none !important}
@@ -21,6 +26,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll("img").forEach((img) => {
     img.decoding = "async";
+  });
+
+  // PRIVACY LINKS
+  document.querySelectorAll(".site-footer").forEach((footer) => {
+    if (!footer.querySelector(".footer-legal")) {
+      const legal = document.createElement("p");
+      legal.className = "footer-legal";
+      legal.innerHTML = '<a href="privacy.html">Privacy Policy</a>';
+
+      const copyright = footer.querySelector(".copyright");
+      if (copyright) {
+        footer.insertBefore(legal, copyright);
+      } else {
+        footer.appendChild(legal);
+      }
+    }
   });
 
   // MOBILE MENU
@@ -121,6 +142,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // CONTACT FORM
   const form = document.querySelector("#inquiry-form");
   const status = document.querySelector("#form-status");
+
+  if (form) {
+    const formActions = form.querySelector(".form-actions");
+    if (formActions && !form.querySelector(".form-privacy-note")) {
+      const privacyNote = document.createElement("p");
+      privacyNote.className = "form-privacy-note";
+      privacyNote.innerHTML = 'Information submitted through this form is used to respond to your inquiry. <a href="privacy.html">Privacy Policy</a>.';
+      formActions.insertAdjacentElement("afterend", privacyNote);
+    }
+  }
 
   if (form && status) {
     status.setAttribute("tabindex", "-1");
