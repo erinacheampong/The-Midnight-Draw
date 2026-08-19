@@ -1,5 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  // ACCESSIBILITY + PERFORMANCE POLISH
+  const utilityStyles = document.createElement("style");
+  utilityStyles.textContent = `
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline:2px solid #b49356;
+      outline-offset:3px;
+    }
+    [hidden]{display:none !important}
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto !important}
+      *,*::before,*::after{transition:none !important;animation:none !important}
+    }
+  `;
+  document.head.appendChild(utilityStyles);
+
+  document.querySelectorAll("img").forEach((img) => {
+    img.decoding = "async";
+  });
+
   // MOBILE MENU
   const headerInner = document.querySelector(".header-inner");
   const nav = document.querySelector(".main-nav");
