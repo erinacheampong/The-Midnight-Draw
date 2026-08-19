@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         setMenu(false);
+        if (window.innerWidth <= 760) toggle.focus();
       }
     });
 
@@ -48,15 +49,26 @@ document.addEventListener("DOMContentLoaded", () => {
         setMenu(false);
       }
     });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 760) setMenu(false);
+    });
   }
 
 
   // FAQ DROPDOWNS
-  document.querySelectorAll(".faq-item").forEach((item) => {
+  document.querySelectorAll(".faq-item").forEach((item, index) => {
     const button = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
     const icon = item.querySelector(".faq-icon");
 
-    if (!button || !icon) return;
+    if (!button || !answer || !icon) return;
+
+    const answerId = `faq-answer-${index + 1}`;
+    answer.id = answerId;
+    answer.hidden = true;
+    button.setAttribute("aria-controls", answerId);
+    button.setAttribute("aria-expanded", "false");
 
     button.addEventListener("click", () => {
       const wasOpen = item.classList.contains("open");
@@ -65,20 +77,18 @@ document.addEventListener("DOMContentLoaded", () => {
         other.classList.remove("open");
 
         const otherButton = other.querySelector(".faq-question");
+        const otherAnswer = other.querySelector(".faq-answer");
         const otherIcon = other.querySelector(".faq-icon");
 
-        if (otherButton) {
-          otherButton.setAttribute("aria-expanded", "false");
-        }
-
-        if (otherIcon) {
-          otherIcon.textContent = "+";
-        }
+        if (otherButton) otherButton.setAttribute("aria-expanded", "false");
+        if (otherAnswer) otherAnswer.hidden = true;
+        if (otherIcon) otherIcon.textContent = "+";
       });
 
       if (!wasOpen) {
         item.classList.add("open");
         button.setAttribute("aria-expanded", "true");
+        answer.hidden = false;
         icon.textContent = "–";
       }
     });
@@ -90,6 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const status = document.querySelector("#form-status");
 
   if (form && status) {
+    status.setAttribute("tabindex", "-1");
+
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
 
@@ -99,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
       submit.disabled = true;
       submit.textContent = "Sending…";
       status.classList.remove("show");
+      status.textContent = "";
 
       try {
         const response = await fetch(form.action, {
@@ -117,11 +130,13 @@ document.addEventListener("DOMContentLoaded", () => {
         status.textContent =
           "Thank you. Your inquiry has been sent. I’ll be in touch soon.";
         status.classList.add("show");
+        status.focus();
 
       } catch (error) {
         status.textContent =
           "Something went wrong. Please try again or reach out through Instagram.";
         status.classList.add("show");
+        status.focus();
 
       } finally {
         submit.disabled = false;
