@@ -5,96 +5,42 @@
 <title>The Draw | Interactive Tarot Experience | The Midnight Draw</title>
 <meta name="description" content="Choose a card and experience The Draw, an interactive tarot moment from The Midnight Draw. Available for private events, brand activations, corporate gatherings, and celebrations throughout Southern California.">
 <meta name="robots" content="index,follow"><link rel="canonical" href="https://themidnightdraw.com/draw.html"><link rel="icon" type="image/png" href="favicon.png">
-<meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="The Midnight Draw"><meta property="og:title" content="The Draw | The Midnight Draw"><meta property="og:description" content="Choose the card that calls to you, then bring The Midnight Draw experience to your event."><meta property="og:url" content="https://themidnightdraw.com/draw.html"><meta property="og:image" content="https://themidnightdraw.com/about-erin.jpg"><meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="styles.css">
 <style>
 .draw-page{background:var(--cream)}
 .draw-hero{max-width:1120px;margin:auto;display:grid;grid-template-columns:1fr .82fr;min-height:330px;background:#f8f3ea;align-items:stretch}
-.draw-hero-copy{padding:38px 7%;display:flex;flex-direction:column;justify-content:center}
-.draw-hero h1{margin:0;font-size:clamp(40px,4.6vw,58px);font-weight:400;line-height:1;letter-spacing:-.02em}
-.draw-hero .lead{margin:14px 0 0;font-size:clamp(17px,1.6vw,21px);font-style:italic;line-height:1.35}
-.draw-hero-photo{overflow:hidden;background:#eee7dd;display:flex;align-items:center;justify-content:center}
-.draw-hero-photo img{width:100%;height:330px;object-fit:cover;object-position:center 18%;display:block}
-.draw-stage{max-width:920px;margin:auto;padding:44px 5% 50px;text-align:center}
-.draw-stage h2{margin:0;font-size:clamp(34px,4vw,50px);font-weight:400}
-.draw-stage .instruction{margin:8px auto 24px;max-width:540px;color:var(--muted)}
-.draw-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:650px;margin:0 auto}
-.draw-card{appearance:none;border:0;background:transparent;padding:0;cursor:pointer;aspect-ratio:257/422;position:relative;border-radius:14px;overflow:hidden;transition:transform .22s ease}
-.draw-card:hover{transform:translateY(-4px)}
-.card-image{width:100%;height:100%;display:block;object-fit:cover;border-radius:14px;box-shadow:0 10px 22px rgba(20,16,12,.16);transition:opacity .2s ease}
-.draw-card.is-revealed .card-image{opacity:.98}
-.draw-help{margin:18px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4f4842}
-.draw-result{max-width:720px;margin:30px auto 0;padding:24px 24px;border-top:1px solid rgba(180,147,86,.4);border-bottom:1px solid rgba(180,147,86,.4);display:none}
-.draw-result.show{display:block}
-.draw-result .eyebrow{margin-bottom:7px}
-.draw-result h3{margin:0;font-size:clamp(30px,3.7vw,44px);font-weight:400}
-.draw-result p{margin:10px auto 18px;max-width:500px;font-size:clamp(18px,2vw,24px);font-style:italic;line-height:1.35}
-.draw-again{border:1px solid var(--gold);background:transparent;color:var(--ink);padding:12px 22px;font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
-.draw-again:hover,.draw-again:focus-visible{background:var(--black);color:var(--cream)}
-.draw-event{max-width:1120px;margin:auto;display:grid;grid-template-columns:.95fr 1.05fr;background:#f8f3ea;border-top:1px solid rgba(180,147,86,.3)}
-.draw-event-copy{padding:42px 8%;display:flex;flex-direction:column;justify-content:center;text-align:center;align-items:center}
-.draw-event-copy h2{margin:0;font-size:clamp(32px,3.6vw,46px);font-weight:400;line-height:1.05}
-.draw-event-copy p{margin:14px auto 20px;max-width:480px}
-.draw-event-image img{width:100%;height:100%;min-height:340px;object-fit:cover;display:block}
-@media(max-width:900px){.draw-hero,.draw-event{grid-template-columns:1fr}.draw-hero{max-width:760px;min-height:0}.draw-hero-copy{padding:32px 7%;text-align:center}.draw-hero-photo img{height:280px;object-fit:cover;object-position:center 18%}.draw-stage{padding:38px 28px 42px}.draw-event-copy{padding:38px 7%}.draw-event-image img{min-height:0;height:auto}}
+.draw-hero-copy{padding:38px 7%;display:flex;flex-direction:column;justify-content:center}.draw-hero h1{margin:0;font-size:clamp(40px,4.6vw,58px);font-weight:400;line-height:1;letter-spacing:-.02em}.draw-hero .lead{margin:14px 0 0;font-size:clamp(17px,1.6vw,21px);font-style:italic;line-height:1.35}.draw-hero-photo{overflow:hidden;background:#eee7dd;display:flex;align-items:center;justify-content:center}.draw-hero-photo img{width:100%;height:330px;object-fit:cover;object-position:center 18%;display:block}
+.draw-stage{max-width:920px;margin:auto;padding:44px 5% 50px;text-align:center}.draw-stage h2{margin:0;font-size:clamp(34px,4vw,50px);font-weight:400}.draw-stage .instruction{margin:8px auto 24px;max-width:540px;color:var(--muted)}
+.draw-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:650px;margin:0 auto}.draw-card{appearance:none;border:0;background:transparent;padding:0;cursor:pointer;aspect-ratio:257/422;position:relative;border-radius:12px;overflow:hidden;transition:transform .22s ease}.draw-card:hover{transform:translateY(-4px)}.card-art{width:100%;height:100%;display:block}.card-art svg{display:block;width:100%;height:100%}
+.draw-help{margin:18px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4f4842}.draw-result{max-width:720px;margin:30px auto 0;padding:24px;border-top:1px solid rgba(180,147,86,.4);border-bottom:1px solid rgba(180,147,86,.4);display:none}.draw-result.show{display:block}.draw-result .eyebrow{margin-bottom:7px}.draw-result h3{margin:0;font-size:clamp(30px,3.7vw,44px);font-weight:400}.draw-result p{margin:10px auto 18px;max-width:500px;font-size:clamp(18px,2vw,24px);font-style:italic;line-height:1.35}.draw-again{border:1px solid var(--gold);background:transparent;color:var(--ink);padding:12px 22px;font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}.draw-again:hover,.draw-again:focus-visible{background:var(--black);color:var(--cream)}
+.draw-event{max-width:1120px;margin:auto;display:grid;grid-template-columns:.95fr 1.05fr;background:#f8f3ea;border-top:1px solid rgba(180,147,86,.3)}.draw-event-copy{padding:42px 8%;display:flex;flex-direction:column;justify-content:center;text-align:center;align-items:center}.draw-event-copy h2{margin:0;font-size:clamp(32px,3.6vw,46px);font-weight:400;line-height:1.05}.draw-event-copy p{margin:14px auto 20px;max-width:480px}.draw-event-image img{width:100%;height:100%;min-height:340px;object-fit:cover;display:block}
+@media(max-width:900px){.draw-hero,.draw-event{grid-template-columns:1fr}.draw-hero{max-width:760px;min-height:0}.draw-hero-copy{padding:32px 7%;text-align:center}.draw-hero-photo img{height:280px}.draw-stage{padding:38px 28px 42px}.draw-event-copy{padding:38px 7%}.draw-event-image img{min-height:0;height:auto}}
 @media(max-width:620px){.draw-hero h1{font-size:clamp(36px,11vw,46px)}.draw-hero .lead{font-size:17px}.draw-hero-photo img{height:245px}.draw-stage{padding:32px 16px 36px}.draw-stage .instruction{margin-bottom:18px}.draw-cards{gap:9px;max-width:100%}.draw-help{margin-top:14px;font-size:9px;letter-spacing:.1em}.draw-result{margin-top:22px;padding:20px 10px}.draw-event-copy{padding:34px 20px}.draw-event-copy p{margin:12px auto 18px}}
 </style>
 </head>
 <body class="draw-page">
-<header class="site-header"><div class="header-inner"><a class="brand-lockup" href="index.html" aria-label="The Midnight Draw home"><span class="brand-name">The Midnight Draw</span><span class="brand-subtitle">Tarot Readings</span></a><nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="draw.html" class="active">The Draw</a><a href="gallery.html">Gallery</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav></div></header>
+<header class="site-header"><div class="header-inner"><a class="brand-lockup" href="index.html"><span class="brand-name">The Midnight Draw</span><span class="brand-subtitle">Tarot Readings</span></a><nav class="main-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="draw.html" class="active">The Draw</a><a href="gallery.html">Gallery</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav></div></header>
 <main>
 <section class="draw-hero"><div class="draw-hero-copy"><p class="eyebrow">The Midnight Draw</p><h1>The Draw<br>Is Yours</h1><p class="lead">Choose the card that calls to you.</p></div><div class="draw-hero-photo"><img src="about-erin.jpg" alt="Erin, reader behind The Midnight Draw, holding The Star tarot card"></div></section>
-<section class="draw-stage" aria-labelledby="choose-card-title">
-<p class="eyebrow">A Moment of Reflection</p><h2 id="choose-card-title">Choose a Card</h2><p class="body-copy instruction">Take a moment, then select the card that catches your attention first.</p>
+<section class="draw-stage"><p class="eyebrow">A Moment of Reflection</p><h2 id="choose-card-title">Choose a Card</h2><p class="body-copy instruction">Take a moment, then select the card that catches your attention first.</p>
 <div class="draw-cards" id="draw-cards">
-<button class="draw-card" type="button" data-card="The High Priestess" data-message="Trust what you already know." data-front="high-priestess-gold.png?v=5" aria-label="Choose card one"><img class="card-image" src="tarot-card-back-midnight-draw.jpg?v=2" alt="The Midnight Draw tarot card back" loading="eager"></button>
-<button class="draw-card" type="button" data-card="Wheel of Fortune" data-message="A shift can open a path you could not see before." data-front="wheel-of-fortune-gold.png?v=5" aria-label="Choose card two"><img class="card-image" src="tarot-card-back-midnight-draw.jpg?v=2" alt="The Midnight Draw tarot card back" loading="eager"></button>
-<button class="draw-card" type="button" data-card="Nine of Pentacles" data-message="Notice what you have built. You are allowed to enjoy it." data-front="nine-of-pentacles-gold.png?v=5" aria-label="Choose card three"><img class="card-image" src="tarot-card-back-midnight-draw.jpg?v=2" alt="The Midnight Draw tarot card back" loading="eager"></button>
-</div>
-<p class="draw-help">Tap a card to reveal your message</p>
-<div class="draw-result" id="draw-result" aria-live="polite"><p class="eyebrow">Your Card</p><h3 id="result-title"></h3><p id="result-message"></p><button class="draw-again" id="draw-again" type="button">Draw Again</button></div>
-</section>
+<button class="draw-card" type="button" data-key="high" data-card="The High Priestess" data-message="Trust what you already know." aria-label="Choose card one"><span class="card-art"></span></button>
+<button class="draw-card" type="button" data-key="wheel" data-card="Wheel of Fortune" data-message="A shift can open a path you could not see before." aria-label="Choose card two"><span class="card-art"></span></button>
+<button class="draw-card" type="button" data-key="nine" data-card="Nine of Pentacles" data-message="Notice what you have built. You are allowed to enjoy it." aria-label="Choose card three"><span class="card-art"></span></button>
+</div><p class="draw-help">Tap a card to reveal your message</p>
+<div class="draw-result" id="draw-result" aria-live="polite"><p class="eyebrow">Your Card</p><h3 id="result-title"></h3><p id="result-message"></p><button class="draw-again" id="draw-again" type="button">Draw Again</button></div></section>
 <section class="draw-event"><div class="draw-event-copy"><p class="eyebrow">At Your Event</p><h2>Bring the experience to your gathering.</h2><p class="body-copy">The Midnight Draw offers approachable tarot mini readings designed to feel like a natural part of private parties, brand activations, corporate events, and seasonal gatherings.</p><a class="btn" href="contact.html">Inquire About Your Event</a></div><div class="draw-event-image"><img src="home-three-card.jpg" alt="The Midnight Draw tarot cards arranged for a reading"></div></section>
 </main>
-<footer class="site-footer"><p class="footer-title">Let’s Connect</p><a class="instagram-link" href="https://www.instagram.com/themidnightdraw/" target="_blank" rel="noopener" aria-label="Follow The Midnight Draw on Instagram"><svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>@themidnightdraw</a><p class="copyright">© 2026 The Midnight Draw. All rights reserved.</p></footer>
+<footer class="site-footer"><p class="footer-title">Let’s Connect</p><a class="instagram-link" href="https://www.instagram.com/themidnightdraw/" target="_blank" rel="noopener">@themidnightdraw</a><p class="copyright">© 2026 The Midnight Draw. All rights reserved.</p></footer>
 <script src="site.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded',function(){
-  const cards=Array.from(document.querySelectorAll('.draw-card'));
-  const result=document.getElementById('draw-result');
-  const title=document.getElementById('result-title');
-  const message=document.getElementById('result-message');
-  const again=document.getElementById('draw-again');
-  cards.forEach(function(card){const pre=new Image();pre.src=card.dataset.front;});
-  cards.forEach(function(card){
-    card.addEventListener('click',function(){
-      if(result.classList.contains('show'))return;
-      const image=card.querySelector('.card-image');
-      image.src=card.dataset.front;
-      image.alt=card.dataset.card+' tarot card';
-      card.classList.add('is-revealed');
-      cards.forEach(function(other){if(other!==card)other.setAttribute('aria-disabled','true')});
-      window.setTimeout(function(){
-        title.textContent=card.dataset.card;
-        message.textContent=card.dataset.message;
-        result.classList.add('show');
-        result.scrollIntoView({behavior:'smooth',block:'nearest'});
-      },260);
-    });
-  });
-  again.addEventListener('click',function(){
-    cards.forEach(function(card){
-      const image=card.querySelector('.card-image');
-      image.src='tarot-card-back-midnight-draw.jpg?v=2';
-      image.alt='The Midnight Draw tarot card back';
-      card.classList.remove('is-revealed');
-      card.removeAttribute('aria-disabled');
-    });
-    result.classList.remove('show');
-    title.textContent='';
-    message.textContent='';
-    document.getElementById('choose-card-title').scrollIntoView({behavior:'smooth',block:'center'});
-  });
-});
+const gold='#b49356',black='#09080b',cream='#f5f0e6';
+function shell(inner,label='THE MIDNIGHT DRAW'){return `<svg viewBox="0 0 257 422" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="257" height="422" rx="12" fill="${black}"/><rect x="8" y="8" width="241" height="406" rx="9" fill="none" stroke="${gold}" stroke-width="2"/><rect x="16" y="16" width="225" height="390" rx="6" fill="none" stroke="${gold}" stroke-opacity=".55"/>${inner}<text x="128.5" y="388" fill="${gold}" font-family="Georgia,serif" font-size="9" letter-spacing="2.2" text-anchor="middle">${label}</text></svg>`}
+const back=shell(`<g fill="${gold}">${Array.from({length:34},(_,i)=>`<circle cx="${28+(i*47)%205}" cy="${34+(i*71)%305}" r="${i%5===0?1.5:.7}" opacity="${i%3===0?.9:.45}"/>`).join('')}</g><g stroke="${gold}" fill="none"><circle cx="128.5" cy="184" r="63"/><circle cx="128.5" cy="184" r="49" stroke-opacity=".55"/><path d="M128.5 86V282M65 184H192M86 141L171 226M171 141L86 226"/><path d="M128.5 116l10 58 42 10-42 10-10 58-10-58-42-10 42-10z" fill="${gold}"/></g><path d="M111 300q17 17 35 0q-4 27-18 33-14-6-17-33z" fill="none" stroke="${gold}"/>`);
+const high=shell(`<text x="128.5" y="42" fill="${gold}" font-family="Georgia,serif" font-size="12" text-anchor="middle">II</text><g stroke="${gold}" fill="none"><rect x="44" y="74" width="32" height="220"/><rect x="181" y="74" width="32" height="220"/><path d="M76 98Q128 63 181 98M76 112Q128 77 181 112" stroke-opacity=".5"/><circle cx="128.5" cy="159" r="38"/><path d="M108 169q20 22 41 0q-5 33-21 40-15-7-20-40z"/><path d="M97 246q31-34 63 0v55H97z"/><path d="M113 138q16-20 31 0"/></g><g fill="${gold}"><circle cx="104" cy="96" r="1"/><circle cx="150" cy="116" r="1.2"/><circle cx="116" cy="222" r="1"/><circle cx="164" cy="199" r="1"/></g><text x="128.5" y="346" fill="${gold}" font-family="Georgia,serif" font-size="15" letter-spacing="1.2" text-anchor="middle">THE HIGH PRIESTESS</text>`,'THE MIDNIGHT DRAW');
+const wheel=shell(`<text x="128.5" y="42" fill="${gold}" font-family="Georgia,serif" font-size="12" text-anchor="middle">X</text><g stroke="${gold}" fill="none"><circle cx="128.5" cy="180" r="82"/><circle cx="128.5" cy="180" r="62"/><circle cx="128.5" cy="180" r="35"/><path d="M128.5 98v164M46.5 180h164M70 122l117 117M187 122L70 239"/><circle cx="128.5" cy="98" r="7" fill="${gold}"/><circle cx="210.5" cy="180" r="7" fill="${gold}"/><circle cx="128.5" cy="262" r="7" fill="${gold}"/><circle cx="46.5" cy="180" r="7" fill="${gold}"/></g><text x="128.5" y="346" fill="${gold}" font-family="Georgia,serif" font-size="15" letter-spacing="1.2" text-anchor="middle">WHEEL OF FORTUNE</text>`,'THE MIDNIGHT DRAW');
+const nine=shell(`<text x="128.5" y="42" fill="${gold}" font-family="Georgia,serif" font-size="12" text-anchor="middle">IX</text><g stroke="${gold}" fill="none"><path d="M77 286q13-82 51-144 37 62 51 144"/><circle cx="128" cy="112" r="23"/><path d="M108 143q19 22 40 0l13 96h-66z"/></g><g stroke="${gold}" fill="none">${[[60,92],[198,92],[73,151],[184,151],[61,216],[197,216],[82,278],[174,278],[128,300]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="14"/><path d="M${x-8} ${y}h16M${x} ${y-8}v16"/>`).join('')}</g><text x="128.5" y="346" fill="${gold}" font-family="Georgia,serif" font-size="14" letter-spacing="1" text-anchor="middle">NINE OF PENTACLES</text>`,'THE MIDNIGHT DRAW');
+const art={high,wheel,nine};
+document.addEventListener('DOMContentLoaded',()=>{const cards=[...document.querySelectorAll('.draw-card')],result=document.getElementById('draw-result'),title=document.getElementById('result-title'),message=document.getElementById('result-message'),again=document.getElementById('draw-again');cards.forEach(c=>c.querySelector('.card-art').innerHTML=back);cards.forEach(card=>card.addEventListener('click',()=>{if(result.classList.contains('show'))return;card.querySelector('.card-art').innerHTML=art[card.dataset.key];cards.forEach(o=>{if(o!==card)o.setAttribute('aria-disabled','true')});title.textContent=card.dataset.card;message.textContent=card.dataset.message;result.classList.add('show');setTimeout(()=>result.scrollIntoView({behavior:'smooth',block:'nearest'}),80)}));again.addEventListener('click',()=>{cards.forEach(c=>{c.querySelector('.card-art').innerHTML=back;c.removeAttribute('aria-disabled')});result.classList.remove('show');title.textContent='';message.textContent='';document.getElementById('choose-card-title').scrollIntoView({behavior:'smooth',block:'center'})})});
 </script>
 </body></html>
