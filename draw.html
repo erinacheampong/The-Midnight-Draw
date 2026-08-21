@@ -21,12 +21,8 @@
 .draw-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:650px;margin:0 auto}
 .draw-card{appearance:none;border:0;background:transparent;padding:0;cursor:pointer;aspect-ratio:257/422;position:relative;border-radius:14px;overflow:hidden;transition:transform .22s ease}
 .draw-card:hover{transform:translateY(-4px)}
-.draw-face{position:absolute;inset:0;border-radius:14px;overflow:hidden;box-shadow:0 10px 22px rgba(20,16,12,.16);transition:opacity .28s ease,transform .28s ease}
-.draw-back{opacity:1;transform:scale(1);background:#0a090b}
-.draw-back img,.draw-front img{width:100%;height:100%;display:block;object-fit:cover;position:absolute;inset:0}
-.draw-front{background:#111014;padding:0;opacity:0;transform:scale(.96);pointer-events:none}
-.draw-card.is-revealed .draw-back{opacity:0;transform:scale(.96)}
-.draw-card.is-revealed .draw-front{opacity:1;transform:scale(1)}
+.card-image{width:100%;height:100%;display:block;object-fit:cover;border-radius:14px;box-shadow:0 10px 22px rgba(20,16,12,.16);transition:opacity .2s ease}
+.draw-card.is-revealed .card-image{opacity:.98}
 .draw-help{margin:18px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4f4842}
 .draw-result{max-width:720px;margin:30px auto 0;padding:24px 24px;border-top:1px solid rgba(180,147,86,.4);border-bottom:1px solid rgba(180,147,86,.4);display:none}
 .draw-result.show{display:block}
@@ -51,9 +47,9 @@
 <section class="draw-stage" aria-labelledby="choose-card-title">
 <p class="eyebrow">A Moment of Reflection</p><h2 id="choose-card-title">Choose a Card</h2><p class="body-copy instruction">Take a moment, then select the card that catches your attention first.</p>
 <div class="draw-cards" id="draw-cards">
-<button class="draw-card" type="button" data-card="The High Priestess" data-message="Trust what you already know." aria-label="Choose card one"><span class="draw-face draw-back"><img src="tarot-card-back-midnight-draw.jpg?v=1" alt="The Midnight Draw tarot card back" loading="eager"></span><span class="draw-face draw-front"><img src="high-priestess-gold.png?v=4" alt="The High Priestess tarot card" loading="eager"></span></button>
-<button class="draw-card" type="button" data-card="Wheel of Fortune" data-message="A shift can open a path you could not see before." aria-label="Choose card two"><span class="draw-face draw-back"><img src="tarot-card-back-midnight-draw.jpg?v=1" alt="The Midnight Draw tarot card back" loading="eager"></span><span class="draw-face draw-front"><img src="wheel-of-fortune-gold.png?v=4" alt="Wheel of Fortune tarot card" loading="eager"></span></button>
-<button class="draw-card" type="button" data-card="Nine of Pentacles" data-message="Notice what you have built. You are allowed to enjoy it." aria-label="Choose card three"><span class="draw-face draw-back"><img src="tarot-card-back-midnight-draw.jpg?v=1" alt="The Midnight Draw tarot card back" loading="eager"></span><span class="draw-face draw-front"><img src="nine-of-pentacles-gold.png?v=4" alt="Nine of Pentacles tarot card" loading="eager"></span></button>
+<button class="draw-card" type="button" data-card="The High Priestess" data-message="Trust what you already know." data-front="high-priestess-gold.png?v=5" aria-label="Choose card one"><img class="card-image" src="tarot-card-back-midnight-draw.jpg?v=2" alt="The Midnight Draw tarot card back" loading="eager"></button>
+<button class="draw-card" type="button" data-card="Wheel of Fortune" data-message="A shift can open a path you could not see before." data-front="wheel-of-fortune-gold.png?v=5" aria-label="Choose card two"><img class="card-image" src="tarot-card-back-midnight-draw.jpg?v=2" alt="The Midnight Draw tarot card back" loading="eager"></button>
+<button class="draw-card" type="button" data-card="Nine of Pentacles" data-message="Notice what you have built. You are allowed to enjoy it." data-front="nine-of-pentacles-gold.png?v=5" aria-label="Choose card three"><img class="card-image" src="tarot-card-back-midnight-draw.jpg?v=2" alt="The Midnight Draw tarot card back" loading="eager"></button>
 </div>
 <p class="draw-help">Tap a card to reveal your message</p>
 <div class="draw-result" id="draw-result" aria-live="polite"><p class="eyebrow">Your Card</p><h3 id="result-title"></h3><p id="result-message"></p><button class="draw-again" id="draw-again" type="button">Draw Again</button></div>
@@ -69,9 +65,13 @@ document.addEventListener('DOMContentLoaded',function(){
   const title=document.getElementById('result-title');
   const message=document.getElementById('result-message');
   const again=document.getElementById('draw-again');
+  cards.forEach(function(card){const pre=new Image();pre.src=card.dataset.front;});
   cards.forEach(function(card){
     card.addEventListener('click',function(){
       if(result.classList.contains('show'))return;
+      const image=card.querySelector('.card-image');
+      image.src=card.dataset.front;
+      image.alt=card.dataset.card+' tarot card';
       card.classList.add('is-revealed');
       cards.forEach(function(other){if(other!==card)other.setAttribute('aria-disabled','true')});
       window.setTimeout(function(){
@@ -83,9 +83,16 @@ document.addEventListener('DOMContentLoaded',function(){
     });
   });
   again.addEventListener('click',function(){
-    cards.forEach(function(card){card.classList.remove('is-revealed');card.removeAttribute('aria-disabled')});
+    cards.forEach(function(card){
+      const image=card.querySelector('.card-image');
+      image.src='tarot-card-back-midnight-draw.jpg?v=2';
+      image.alt='The Midnight Draw tarot card back';
+      card.classList.remove('is-revealed');
+      card.removeAttribute('aria-disabled');
+    });
     result.classList.remove('show');
-    title.textContent='';message.textContent='';
+    title.textContent='';
+    message.textContent='';
     document.getElementById('choose-card-title').scrollIntoView({behavior:'smooth',block:'center'});
   });
 });
