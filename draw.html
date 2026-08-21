@@ -18,17 +18,17 @@
 .draw-stage{max-width:920px;margin:auto;padding:44px 5% 50px;text-align:center}
 .draw-stage h2{margin:0;font-size:clamp(34px,4vw,50px);font-weight:400}
 .draw-stage .instruction{margin:8px auto 24px;max-width:540px;color:var(--muted)}
-.draw-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:650px;margin:0 auto;perspective:1100px;-webkit-perspective:1100px}
-.draw-card{appearance:none;border:0;background:transparent;padding:0;cursor:pointer;aspect-ratio:257/422;position:relative;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;transition:transform .62s cubic-bezier(.2,.7,.2,1);-webkit-transition:-webkit-transform .62s cubic-bezier(.2,.7,.2,1);border-radius:8px}
-.draw-card:hover{transform:translateY(-4px);-webkit-transform:translateY(-4px)}
-.draw-card.is-flipped{transform:rotateY(180deg);-webkit-transform:rotateY(180deg)}
-.draw-card.is-flipped:hover{transform:rotateY(180deg);-webkit-transform:rotateY(180deg)}
-.draw-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:8px;overflow:hidden;box-shadow:0 10px 22px rgba(20,16,12,.16);transform:translateZ(0);-webkit-transform:translateZ(0)}
-.draw-back{background:#0a090b;border:2px solid #b49356}
+.draw-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:650px;margin:0 auto}
+.draw-card{appearance:none;border:0;background:transparent;padding:0;cursor:pointer;aspect-ratio:257/422;position:relative;border-radius:8px;overflow:hidden;transition:transform .22s ease}
+.draw-card:hover{transform:translateY(-4px)}
+.draw-face{position:absolute;inset:0;border-radius:8px;overflow:hidden;box-shadow:0 10px 22px rgba(20,16,12,.16);transition:opacity .28s ease,transform .28s ease}
+.draw-back{background:#0a090b;border:2px solid #b49356;opacity:1;transform:scale(1)}
 .draw-back::before{content:"";position:absolute;inset:8px;border:1px solid rgba(180,147,86,.8);border-radius:4px}
 .draw-back::after{content:"";position:absolute;inset:18px;border:1px solid rgba(180,147,86,.38);border-radius:2px}
-.draw-front{transform:rotateY(180deg) translateZ(1px);-webkit-transform:rotateY(180deg) translateZ(1px);background:#111014;border:1px solid #b49356;padding:0}
-.draw-front img{width:100%;height:100%;display:block;object-fit:cover;position:absolute;inset:0;transform:translateZ(0);-webkit-transform:translateZ(0)}
+.draw-front{background:#111014;border:1px solid #b49356;padding:0;opacity:0;transform:scale(.96);pointer-events:none}
+.draw-card.is-revealed .draw-back{opacity:0;transform:scale(.96)}
+.draw-card.is-revealed .draw-front{opacity:1;transform:scale(1)}
+.draw-front img{width:100%;height:100%;display:block;object-fit:cover;position:absolute;inset:0}
 .draw-help{margin:18px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4f4842}
 .draw-result{max-width:720px;margin:30px auto 0;padding:24px 24px;border-top:1px solid rgba(180,147,86,.4);border-bottom:1px solid rgba(180,147,86,.4);display:none}
 .draw-result.show{display:block}
@@ -53,9 +53,9 @@
 <section class="draw-stage" aria-labelledby="choose-card-title">
 <p class="eyebrow">A Moment of Reflection</p><h2 id="choose-card-title">Choose a Card</h2><p class="body-copy instruction">Take a moment, then select the card that catches your attention first.</p>
 <div class="draw-cards" id="draw-cards">
-<button class="draw-card" type="button" data-card="The High Priestess" data-message="Trust what you already know." aria-label="Choose card one"><span class="draw-face draw-back"></span><span class="draw-face draw-front"><img src="high-priestess-gold.png?v=3" alt="The High Priestess tarot card" loading="eager"></span></button>
-<button class="draw-card" type="button" data-card="Wheel of Fortune" data-message="A shift can open a path you could not see before." aria-label="Choose card two"><span class="draw-face draw-back"></span><span class="draw-face draw-front"><img src="wheel-of-fortune-gold.png?v=3" alt="Wheel of Fortune tarot card" loading="eager"></span></button>
-<button class="draw-card" type="button" data-card="Nine of Pentacles" data-message="Notice what you have built. You are allowed to enjoy it." aria-label="Choose card three"><span class="draw-face draw-back"></span><span class="draw-face draw-front"><img src="nine-of-pentacles-gold.png?v=3" alt="Nine of Pentacles tarot card" loading="eager"></span></button>
+<button class="draw-card" type="button" data-card="The High Priestess" data-message="Trust what you already know." aria-label="Choose card one"><span class="draw-face draw-back"></span><span class="draw-face draw-front"><img src="high-priestess-gold.png?v=4" alt="The High Priestess tarot card" loading="eager"></span></button>
+<button class="draw-card" type="button" data-card="Wheel of Fortune" data-message="A shift can open a path you could not see before." aria-label="Choose card two"><span class="draw-face draw-back"></span><span class="draw-face draw-front"><img src="wheel-of-fortune-gold.png?v=4" alt="Wheel of Fortune tarot card" loading="eager"></span></button>
+<button class="draw-card" type="button" data-card="Nine of Pentacles" data-message="Notice what you have built. You are allowed to enjoy it." aria-label="Choose card three"><span class="draw-face draw-back"></span><span class="draw-face draw-front"><img src="nine-of-pentacles-gold.png?v=4" alt="Nine of Pentacles tarot card" loading="eager"></span></button>
 </div>
 <p class="draw-help">Tap a card to reveal your message</p>
 <div class="draw-result" id="draw-result" aria-live="polite"><p class="eyebrow">Your Card</p><h3 id="result-title"></h3><p id="result-message"></p><button class="draw-again" id="draw-again" type="button">Draw Again</button></div>
@@ -65,6 +65,31 @@
 <footer class="site-footer"><p class="footer-title">Let’s Connect</p><a class="instagram-link" href="https://www.instagram.com/themidnightdraw/" target="_blank" rel="noopener" aria-label="Follow The Midnight Draw on Instagram"><svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>@themidnightdraw</a><p class="copyright">© 2026 The Midnight Draw. All rights reserved.</p></footer>
 <script src="site.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded',function(){const cards=Array.from(document.querySelectorAll('.draw-card'));const result=document.getElementById('draw-result');const title=document.getElementById('result-title');const message=document.getElementById('result-message');const again=document.getElementById('draw-again');cards.forEach(function(card){card.addEventListener('click',function(){if(result.classList.contains('show'))return;card.classList.add('is-flipped');cards.forEach(function(other){if(other!==card)other.setAttribute('aria-disabled','true')});window.setTimeout(function(){title.textContent=card.dataset.card;message.textContent=card.dataset.message;result.classList.add('show');result.scrollIntoView({behavior:'smooth',block:'nearest'})},430)})});again.addEventListener('click',function(){cards.forEach(function(card){card.classList.remove('is-flipped');card.removeAttribute('aria-disabled')});result.classList.remove('show');title.textContent='';message.textContent='';document.getElementById('choose-card-title').scrollIntoView({behavior:'smooth',block:'center'})})});
+document.addEventListener('DOMContentLoaded',function(){
+  const cards=Array.from(document.querySelectorAll('.draw-card'));
+  const result=document.getElementById('draw-result');
+  const title=document.getElementById('result-title');
+  const message=document.getElementById('result-message');
+  const again=document.getElementById('draw-again');
+  cards.forEach(function(card){
+    card.addEventListener('click',function(){
+      if(result.classList.contains('show'))return;
+      card.classList.add('is-revealed');
+      cards.forEach(function(other){if(other!==card)other.setAttribute('aria-disabled','true')});
+      window.setTimeout(function(){
+        title.textContent=card.dataset.card;
+        message.textContent=card.dataset.message;
+        result.classList.add('show');
+        result.scrollIntoView({behavior:'smooth',block:'nearest'});
+      },260);
+    });
+  });
+  again.addEventListener('click',function(){
+    cards.forEach(function(card){card.classList.remove('is-revealed');card.removeAttribute('aria-disabled')});
+    result.classList.remove('show');
+    title.textContent='';message.textContent='';
+    document.getElementById('choose-card-title').scrollIntoView({behavior:'smooth',block:'center'});
+  });
+});
 </script>
 </body></html>
