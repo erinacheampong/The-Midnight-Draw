@@ -19,16 +19,14 @@
 .draw-stage h2{margin:0;font-size:clamp(34px,4vw,50px);font-weight:400}
 .draw-stage .instruction{margin:8px auto 24px;max-width:540px;color:var(--muted)}
 .draw-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:650px;margin:0 auto}
-.draw-card{appearance:none;border:0;background:transparent;padding:0;cursor:pointer;aspect-ratio:257/422;position:relative;border-radius:8px;overflow:hidden;transition:transform .22s ease}
+.draw-card{appearance:none;border:0;background:transparent;padding:0;cursor:pointer;aspect-ratio:257/422;position:relative;border-radius:14px;overflow:hidden;transition:transform .22s ease}
 .draw-card:hover{transform:translateY(-4px)}
-.draw-face{position:absolute;inset:0;border-radius:8px;overflow:hidden;box-shadow:0 10px 22px rgba(20,16,12,.16);transition:opacity .28s ease,transform .28s ease}
-.draw-back{background:#0a090b;border:2px solid #b49356;opacity:1;transform:scale(1)}
-.draw-back::before{content:"";position:absolute;inset:8px;border:1px solid rgba(180,147,86,.8);border-radius:4px}
-.draw-back::after{content:"";position:absolute;inset:18px;border:1px solid rgba(180,147,86,.38);border-radius:2px}
-.draw-front{background:#111014;border:1px solid #b49356;padding:0;opacity:0;transform:scale(.96);pointer-events:none}
+.draw-face{position:absolute;inset:0;border-radius:14px;overflow:hidden;box-shadow:0 10px 22px rgba(20,16,12,.16);transition:opacity .28s ease,transform .28s ease}
+.draw-back{opacity:1;transform:scale(1);background:#0a090b}
+.draw-back img,.draw-front img{width:100%;height:100%;display:block;object-fit:cover;position:absolute;inset:0}
+.draw-front{background:#111014;padding:0;opacity:0;transform:scale(.96);pointer-events:none}
 .draw-card.is-revealed .draw-back{opacity:0;transform:scale(.96)}
 .draw-card.is-revealed .draw-front{opacity:1;transform:scale(1)}
-.draw-front img{width:100%;height:100%;display:block;object-fit:cover;position:absolute;inset:0}
 .draw-help{margin:18px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4f4842}
 .draw-result{max-width:720px;margin:30px auto 0;padding:24px 24px;border-top:1px solid rgba(180,147,86,.4);border-bottom:1px solid rgba(180,147,86,.4);display:none}
 .draw-result.show{display:block}
@@ -43,7 +41,7 @@
 .draw-event-copy p{margin:14px auto 20px;max-width:480px}
 .draw-event-image img{width:100%;height:100%;min-height:340px;object-fit:cover;display:block}
 @media(max-width:900px){.draw-hero,.draw-event{grid-template-columns:1fr}.draw-hero{max-width:760px;min-height:0}.draw-hero-copy{padding:32px 7%;text-align:center}.draw-hero-photo img{height:280px;object-fit:cover;object-position:center 18%}.draw-stage{padding:38px 28px 42px}.draw-event-copy{padding:38px 7%}.draw-event-image img{min-height:0;height:auto}}
-@media(max-width:620px){.draw-hero h1{font-size:clamp(36px,11vw,46px)}.draw-hero .lead{font-size:17px}.draw-hero-photo img{height:245px}.draw-stage{padding:32px 16px 36px}.draw-stage .instruction{margin-bottom:18px}.draw-cards{gap:9px;max-width:100%}.draw-back{border-width:1px}.draw-back::before{inset:5px}.draw-back::after{inset:12px}.draw-help{margin-top:14px;font-size:9px;letter-spacing:.1em}.draw-result{margin-top:22px;padding:20px 10px}.draw-event-copy{padding:34px 20px}.draw-event-copy p{margin:12px auto 18px}}
+@media(max-width:620px){.draw-hero h1{font-size:clamp(36px,11vw,46px)}.draw-hero .lead{font-size:17px}.draw-hero-photo img{height:245px}.draw-stage{padding:32px 16px 36px}.draw-stage .instruction{margin-bottom:18px}.draw-cards{gap:9px;max-width:100%}.draw-help{margin-top:14px;font-size:9px;letter-spacing:.1em}.draw-result{margin-top:22px;padding:20px 10px}.draw-event-copy{padding:34px 20px}.draw-event-copy p{margin:12px auto 18px}}
 </style>
 </head>
 <body class="draw-page">
@@ -53,9 +51,9 @@
 <section class="draw-stage" aria-labelledby="choose-card-title">
 <p class="eyebrow">A Moment of Reflection</p><h2 id="choose-card-title">Choose a Card</h2><p class="body-copy instruction">Take a moment, then select the card that catches your attention first.</p>
 <div class="draw-cards" id="draw-cards">
-<button class="draw-card" type="button" data-card="The High Priestess" data-message="Trust what you already know." aria-label="Choose card one"><span class="draw-face draw-back"></span><span class="draw-face draw-front"><img src="high-priestess-gold.png?v=4" alt="The High Priestess tarot card" loading="eager"></span></button>
-<button class="draw-card" type="button" data-card="Wheel of Fortune" data-message="A shift can open a path you could not see before." aria-label="Choose card two"><span class="draw-face draw-back"></span><span class="draw-face draw-front"><img src="wheel-of-fortune-gold.png?v=4" alt="Wheel of Fortune tarot card" loading="eager"></span></button>
-<button class="draw-card" type="button" data-card="Nine of Pentacles" data-message="Notice what you have built. You are allowed to enjoy it." aria-label="Choose card three"><span class="draw-face draw-back"></span><span class="draw-face draw-front"><img src="nine-of-pentacles-gold.png?v=4" alt="Nine of Pentacles tarot card" loading="eager"></span></button>
+<button class="draw-card" type="button" data-card="The High Priestess" data-message="Trust what you already know." aria-label="Choose card one"><span class="draw-face draw-back"><img src="tarot-card-back-midnight-draw.jpg?v=1" alt="The Midnight Draw tarot card back" loading="eager"></span><span class="draw-face draw-front"><img src="high-priestess-gold.png?v=4" alt="The High Priestess tarot card" loading="eager"></span></button>
+<button class="draw-card" type="button" data-card="Wheel of Fortune" data-message="A shift can open a path you could not see before." aria-label="Choose card two"><span class="draw-face draw-back"><img src="tarot-card-back-midnight-draw.jpg?v=1" alt="The Midnight Draw tarot card back" loading="eager"></span><span class="draw-face draw-front"><img src="wheel-of-fortune-gold.png?v=4" alt="Wheel of Fortune tarot card" loading="eager"></span></button>
+<button class="draw-card" type="button" data-card="Nine of Pentacles" data-message="Notice what you have built. You are allowed to enjoy it." aria-label="Choose card three"><span class="draw-face draw-back"><img src="tarot-card-back-midnight-draw.jpg?v=1" alt="The Midnight Draw tarot card back" loading="eager"></span><span class="draw-face draw-front"><img src="nine-of-pentacles-gold.png?v=4" alt="Nine of Pentacles tarot card" loading="eager"></span></button>
 </div>
 <p class="draw-help">Tap a card to reveal your message</p>
 <div class="draw-result" id="draw-result" aria-live="polite"><p class="eyebrow">Your Card</p><h3 id="result-title"></h3><p id="result-message"></p><button class="draw-again" id="draw-again" type="button">Draw Again</button></div>
