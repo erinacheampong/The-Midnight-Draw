@@ -1,48 +1,67 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Vow & Veil Events | Southern California Event Planning</title>
-  <meta name="description" content="Vow & Veil Events provides wedding planning, celebration coordination, and corporate event support throughout Southern California.">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Midnight Draw offers intuitive tarot readings for gatherings and celebrations in Southern California.">
+  <title>The Midnight Draw | Tarot Readings</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background:#050407; }
+    body { margin:0; background:#050407; color:#f5efe4; font-family: Arial, sans-serif; }
+    main { width:100%; overflow:hidden; }
+    .section { position:relative; width:100%; line-height:0; background:#050407; }
+    .section img { display:block; width:100%; height:auto; }
+    .click-area { position:absolute; display:block; z-index:3; border-radius:12px; }
+    .click-area:focus-visible, .draw-button:focus-visible { outline:3px solid #d3ad68; outline-offset:4px; }
+    .hero .click-area { left:9.5%; top:75%; width:37%; height:10%; }
+    .booking .click-area { left:12.5%; top:64%; width:38%; height:13%; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .draw-preview { padding:64px 20px 76px; text-align:center; background:radial-gradient(circle at top, rgba(94,79,53,.25), transparent 40%), #050407; line-height:1.5; }
+    .draw-preview-inner { max-width:760px; margin:0 auto; border:1px solid rgba(211,173,104,.35); border-radius:24px; padding:36px 24px 40px; background:rgba(15,12,19,.88); box-shadow:0 18px 50px rgba(0,0,0,.32); }
+    .eyebrow { color:#d3ad68; text-transform:uppercase; letter-spacing:.22em; font-size:12px; margin:0 0 14px; }
+    .draw-preview h2 { font-family:Georgia, 'Times New Roman', serif; font-size:clamp(34px,5vw,52px); line-height:1.1; margin:0 0 14px; color:#f6f0e8; }
+    .draw-preview p { max-width:580px; margin:0 auto 28px; color:#ddd4c6; font-size:17px; }
+    .draw-button { display:inline-block; padding:14px 28px; border-radius:999px; border:1px solid #d3ad68; color:#f8f2ea; text-decoration:none; font-weight:600; letter-spacing:.04em; background:linear-gradient(180deg, rgba(211,173,104,.28), rgba(211,173,104,.12)); }
+    @media (max-width:700px) {
+      .hero .click-area { left:9%; top:74%; width:39%; height:11%; }
+      .booking .click-area { left:11%; top:62%; width:42%; height:15%; }
+      .draw-preview { padding:44px 16px 56px; }
+      .draw-preview-inner { padding:28px 18px 32px; border-radius:18px; }
+      .draw-preview p { font-size:16px; }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header"><div class="header-inner site-shell">
-  <a class="logo" href="index.html"><img src="Logo.png" alt="Vow & Veil Events"></a>
-  <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-  <nav id="site-nav" class="site-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a class="nav-cta" href="contact.html">Book Your Date</a></nav>
-</div></header>
-<main>
-  <section class="home-poster" aria-label="Your celebration. Beautifully supported.">
-    <img src="home-hero-approved.png" alt="White bridal bouquet and flowing veil with Vow & Veil event planning message">
-    <a class="poster-link" href="contact.html" aria-label="Book your date">Book Your Date</a>
-  </section>
-  <section class="home-copy center"><div class="site-shell">
-    <h2>A Fairytale Wedding, Without the Stress</h2>
-    <p>Your wedding should feel exciting, romantic, and full of the people and details you love. Vow & Veil Events brings organization and experienced support to the planning process so you can be present for what matters most.</p>
-  </div></section>
-  <section class="home-services center"><div class="site-shell">
-    <h2>Planning Support for Every Stage</h2>
-    <div class="service-preview-grid">
-      <div class="service-preview"><h3>Full Wedding Planning</h3><p>Support from the first decisions through the wedding day.</p></div>
-      <div class="service-preview"><h3>Partial Wedding Planning</h3><p>Professional guidance to bring plans already in motion together.</p></div>
-      <div class="service-preview"><h3>Wedding Concierge</h3><p>Experienced coordination for the celebration you have already planned.</p></div>
-      <div class="service-preview"><h3>Events &amp; Corporate</h3><p>Planning and coordination for milestone, private, nonprofit, and corporate events.</p></div>
-    </div>
-  </div></section>
-  <section class="home-cta-poster" aria-label="Thoughtful planning. Seamless execution.">
-    <img src="home-cta-approved.png" alt="Candlelit event table with Vow & Veil inquiry message">
-    <a class="poster-link" href="contact.html" aria-label="Inquire now">Inquire Now</a>
-  </section>
-</main>
-<footer class="site-footer"><div class="footer-inner site-shell">
-  <a class="footer-logo" href="index.html"><img src="Logo.png" alt="Vow & Veil Events"></a>
-  <p>Weddings, celebrations and events throughout Southern California</p>
-  <a href="tel:+13239100789">323.910.0789</a>
-  <a href="https://www.instagram.com/vowandveilevents/" target="_blank" rel="noopener">@vowandveilevents</a>
-  <p class="copyright">© 2026 Vow &amp; Veil Events</p>
-</div></footer>
-<script src="script.js"></script>
-</body></html>
+  <main>
+    <section class="section hero" aria-label="The Midnight Draw hero">
+      <img src="01-hero.png" alt="The Midnight Draw immersive tarot card readings">
+      <a class="click-area" href="https://docs.google.com/forms/d/e/1FAIpQLSdqI_BsCOU35TDAajJOIOAgf1tnV3roDa6oxRInF-iEAnyklg/viewform" target="_blank" rel="noopener" aria-label="Book a tarot reading"><span class="sr-only">Book a Reading</span></a>
+    </section>
+    <section class="section" aria-label="What to expect">
+      <img src="02-what-to-expect.png" alt="Reflection, connection, and a little magic" loading="lazy">
+    </section>
+    <section class="section" aria-label="Tarot experiences">
+      <img src="03-offerings.png" alt="Tarot experiences for private events, girls nights, and themed gatherings" loading="lazy">
+    </section>
+    <section class="draw-preview" aria-label="Try the draw">
+      <div class="draw-preview-inner">
+        <p class="eyebrow">A little something extra</p>
+        <h2>Try The Draw</h2>
+        <p>Pull a card from a cleaner, more editorial deck and enjoy a small moment of reflection before booking your event reading.</p>
+        <a class="draw-button" href="draw.html">Open The Draw</a>
+      </div>
+    </section>
+    <section class="section booking" aria-label="Booking inquiry">
+      <img src="04-booking.png" alt="Invite The Midnight Draw to your gathering" loading="lazy">
+      <a class="click-area" href="https://docs.google.com/forms/d/e/1FAIpQLSdqI_BsCOU35TDAajJOIOAgf1tnV3roDa6oxRInF-iEAnyklg/viewform" target="_blank" rel="noopener" aria-label="Open booking inquiry form"><span class="sr-only">Booking Inquiry</span></a>
+    </section>
+    <section class="section" aria-label="Connect with The Midnight Draw">
+      <a href="https://www.instagram.com/themidnightdraw/" target="_blank" rel="noopener">
+        <img src="05-footer.png" alt="Follow The Midnight Draw on Instagram at @themidnightdraw" loading="lazy">
+      </a>
+    </section>
+  </main>
+</body>
+</html>
