@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1080" viewBox="0 0 720 1080" aria-label="The Empress tarot card">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#dac4a0"/><stop offset=".5" stop-color="#b99b72"/><stop offset="1" stop-color="#7a795e"/></linearGradient><linearGradient id="dress" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f8f0e2"/><stop offset="1" stop-color="#dec9ab"/></linearGradient></defs>
+<rect width="720" height="1080" fill="#f5efe4"/><rect x="20" y="20" width="680" height="1040" rx="28" fill="#efe5d6" stroke="#b69761" stroke-width="5"/><rect x="45" y="45" width="630" height="990" rx="15" fill="url(#bg)" stroke="#efe4d2" stroke-width="2"/>
+<g fill="#f5ead7"><circle cx="360" cy="126" r="7"/><circle cx="309" cy="140" r="6"/><circle cx="411" cy="140" r="6"/><circle cx="270" cy="174" r="5"/><circle cx="450" cy="174" r="5"/><circle cx="247" cy="222" r="4.5"/><circle cx="473" cy="222" r="4.5"/></g>
+<path d="M302 273 325 208 360 248 395 208 418 273" fill="none" stroke="#b8934e" stroke-width="12" stroke-linejoin="round"/><g fill="#b8934e"><circle cx="325" cy="204" r="12"/><circle cx="360" cy="245" r="12"/><circle cx="395" cy="204" r="12"/></g>
+<path d="M45 804 C155 746 254 760 360 793 C467 826 566 813 675 754 V1035 H45Z" fill="#52664d"/>
+<ellipse cx="360" cy="332" rx="50" ry="61" fill="#caa57c"/><path d="M310 334 C325 304 342 289 360 289 C378 289 395 304 410 334" fill="none" stroke="#8a6a4b" stroke-width="8"/>
+<path d="M292 411 C307 376 334 360 360 360 C386 360 413 376 428 411 L468 694 C455 757 414 807 360 841 C306 807 265 757 252 694Z" fill="url(#dress)"/>
+<path d="M285 453 C230 439 205 474 215 527 L243 679 C251 713 274 732 304 734Z" fill="#c8b394" opacity=".9"/><path d="M435 453 C490 439 515 474 505 527 L477 679 C469 713 446 732 416 734Z" fill="#c8b394" opacity=".9"/>
+<path d="M283 412 C304 382 332 370 360 370 C388 370 416 382 437 412" fill="none" stroke="#bea47a" stroke-width="8"/>
+<g fill="#68785c"><path d="M130 760 C173 707 210 675 243 661 C226 702 225 742 230 785 C193 786 160 778 130 760Z"/><path d="M590 760 C547 707 510 675 477 661 C494 702 495 742 490 785 C527 786 560 778 590 760Z"/></g>
+<g fill="#c1a052"><ellipse cx="145" cy="741" rx="15" ry="42" transform="rotate(-30 145 741)"/><ellipse cx="182" cy="706" rx="14" ry="40" transform="rotate(-22 182 706)"/><ellipse cx="218" cy="681" rx="13" ry="38" transform="rotate(-13 218 681)"/><ellipse cx="575" cy="741" rx="15" ry="42" transform="rotate(30 575 741)"/><ellipse cx="538" cy="706" rx="14" ry="40" transform="rotate(22 538 706)"/><ellipse cx="502" cy="681" rx="13" ry="38" transform="rotate(13 502 681)"/></g>
+<circle cx="360" cy="555" r="84" fill="#e7d8bf" stroke="#7d6948" stroke-width="5" opacity=".97"/><circle cx="360" cy="536" r="38" fill="none" stroke="#7d6948" stroke-width="10"/><path d="M360 573 V648 M323 612 H397" stroke="#7d6948" stroke-width="11" stroke-linecap="round"/>
+<g fill="#efe4d2"><circle cx="117" cy="326" r="25"/><circle cx="153" cy="305" r="17"/><circle cx="603" cy="326" r="25"/><circle cx="567" cy="305" r="17"/></g>
+<rect x="67" y="67" width="586" height="946" rx="8" fill="none" stroke="#f0e5d4" stroke-width="2" opacity=".8"/>
+<rect x="65" y="922" width="590" height="90" fill="#eee4d6" opacity=".97"/><text x="360" y="982" text-anchor="middle" font-family="Georgia,serif" font-size="44" letter-spacing="6" fill="#171513">THE EMPRESS</text><text x="360" y="102" text-anchor="middle" font-family="Georgia,serif" font-size="28" letter-spacing="5" fill="#6f593c">III</text>
+</svg>
