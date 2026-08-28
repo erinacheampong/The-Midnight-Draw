@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="540" viewBox="0 0 360 540" role="img" aria-label="Ace of Cups tarot card">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#243a53"/>
+      <stop offset="55%" stop-color="#617285"/>
+      <stop offset="100%" stop-color="#8a988d"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b99767"/>
+      <stop offset="100%" stop-color="#8b6b46"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="360" height="540" fill="#f6f0e6"/>
+  <rect x="12" y="12" width="336" height="516" rx="18" fill="#eee6d8" stroke="#b69a6a" stroke-width="2.5"/>
+  <rect x="24" y="24" width="312" height="492" rx="12" fill="url(#sky)" stroke="#efe5d4" stroke-width="1.2"/>
+
+  <g fill="#f2ead6" opacity="0.9">
+    <circle cx="180" cy="72" r="17"/>
+    <path d="M180 93 L170 110 H190 Z"/>
+  </g>
+
+  <path d="M104 184 H256 C253 234 229 267 180 282 C131 267 107 234 104 184 Z" fill="url(#cup)" stroke="#eadcc2" stroke-width="4.5"/>
+  <path d="M138 283 H222 C214 323 199 351 180 366 C161 351 146 323 138 283 Z" fill="#9d7a4f" stroke="#eadcc2" stroke-width="3.8"/>
+  <rect x="170" y="366" width="20" height="56" fill="#9d7a4f"/>
+  <ellipse cx="180" cy="426" rx="48" ry="12" fill="#9d7a4f"/>
+  <path d="M126 199 C110 218 108 251 126 273" fill="none" stroke="#e7eff1" stroke-width="3.8" stroke-linecap="round"/>
+  <path d="M234 199 C250 218 252 251 234 273" fill="none" stroke="#e7eff1" stroke-width="3.8" stroke-linecap="round"/>
+
+  <g stroke="#eef2ed" stroke-width="4.2" stroke-linecap="round">
+    <path d="M160 120 C160 146 156 167 151 188"/>
+    <path d="M180 120 C180 150 180 171 180 194"/>
+    <path d="M200 120 C200 146 204 167 209 188"/>
+  </g>
+
+  <g fill="#eef2ed">
+    <ellipse cx="86" cy="329" rx="18" ry="8" transform="rotate(-18 86 329)"/>
+    <ellipse cx="105" cy="347" rx="15" ry="7" transform="rotate(18 105 347)"/>
+    <ellipse cx="274" cy="329" rx="18" ry="8" transform="rotate(18 274 329)"/>
+    <ellipse cx="255" cy="347" rx="15" ry="7" transform="rotate(-18 255 347)"/>
+  </g>
+
+  <path d="M46 456 C90 428 126 432 180 449 C232 466 270 460 314 434" fill="none" stroke="#dce6e7" stroke-width="7" opacity="0.8"/>
+  <path d="M40 40 h280" stroke="#eadfc9" stroke-width="0.9" opacity="0.55"/>
+  <path d="M40 500 h280" stroke="#eadfc9" stroke-width="0.9" opacity="0.55"/>
+  <path d="M40 40 v460" stroke="#eadfc9" stroke-width="0.9" opacity="0.55"/>
+  <path d="M320 40 v460" stroke="#eadfc9" stroke-width="0.9" opacity="0.55"/>
+
+  <text x="180" y="490" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="25" letter-spacing="2.2" fill="#171513">ACE OF CUPS</text>
+</svg>
