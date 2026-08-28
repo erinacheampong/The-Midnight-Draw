@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="540" viewBox="0 0 360 540" role="img" aria-label="The Empress tarot card">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9c3a1"/>
+      <stop offset="45%" stop-color="#c5ae89"/>
+      <stop offset="100%" stop-color="#a38763"/>
+    </linearGradient>
+    <linearGradient id="gown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f6f0e5"/>
+      <stop offset="100%" stop-color="#e5d6bf"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="360" height="540" fill="#f6f0e6"/>
+  <rect x="12" y="12" width="336" height="516" rx="18" fill="#eee6d8" stroke="#b69a6a" stroke-width="2.5"/>
+  <rect x="24" y="24" width="312" height="492" rx="12" fill="url(#sky)" stroke="#efe5d4" stroke-width="1.2"/>
+
+  <g fill="#f2e9d7" opacity="0.85">
+    <circle cx="180" cy="60" r="3.4"/>
+    <circle cx="154" cy="68" r="3"/>
+    <circle cx="206" cy="68" r="3"/>
+    <circle cx="133" cy="88" r="2.6"/>
+    <circle cx="227" cy="88" r="2.6"/>
+    <circle cx="120" cy="115" r="2.2"/>
+    <circle cx="240" cy="115" r="2.2"/>
+  </g>
+
+  <path d="M149 132 L160 104 L180 122 L200 104 L211 132" fill="none" stroke="#b89556" stroke-width="6" stroke-linejoin="round"/>
+  <g fill="#b89556">
+    <circle cx="160" cy="102" r="6"/>
+    <circle cx="180" cy="120" r="6"/>
+    <circle cx="200" cy="102" r="6"/>
+  </g>
+
+  <path d="M24 402 C76 376 116 380 180 396 C238 410 285 402 336 377 L336 516 L24 516 Z" fill="#5d6d55"/>
+
+  <path d="M151 198 C147 180 154 166 180 160 C206 166 213 180 209 198 L226 318 C220 351 201 377 180 390 C159 377 140 351 134 318 Z" fill="url(#gown)"/>
+  <path d="M140 194 C148 178 165 171 180 171 C195 171 212 178 220 194" fill="none" stroke="#ccb389" stroke-width="4"/>
+  <ellipse cx="180" cy="151" rx="24" ry="29" fill="#c9a67d"/>
+  <path d="M146 222 C122 214 112 230 113 250 L126 324 C129 339 140 349 154 351 L146 222Z" fill="#d7c6ab" opacity="0.9"/>
+  <path d="M214 222 C238 214 248 230 247 250 L234 324 C231 339 220 349 206 351 L214 222Z" fill="#d7c6ab" opacity="0.9"/>
+
+  <g fill="#6f7f5a" opacity="0.95">
+    <path d="M72 370 C92 345 109 330 123 323 C115 342 114 360 116 380 C100 380 85 377 72 370 Z"/>
+    <path d="M288 370 C268 345 251 330 237 323 C245 342 246 360 244 380 C260 380 275 377 288 370 Z"/>
+  </g>
+  <g fill="#b79a55" opacity="0.9">
+    <ellipse cx="78" cy="360" rx="7" ry="20" transform="rotate(-28 78 360)"/>
+    <ellipse cx="94" cy="346" rx="7" ry="20" transform="rotate(-20 94 346)"/>
+    <ellipse cx="109" cy="334" rx="7" ry="20" transform="rotate(-12 109 334)"/>
+    <ellipse cx="282" cy="360" rx="7" ry="20" transform="rotate(28 282 360)"/>
+    <ellipse cx="266" cy="346" rx="7" ry="20" transform="rotate(20 266 346)"/>
+    <ellipse cx="251" cy="334" rx="7" ry="20" transform="rotate(12 251 334)"/>
+  </g>
+
+  <circle cx="180" cy="270" r="42" fill="#e5d5bb" stroke="#7c6949" stroke-width="2.8" opacity="0.94"/>
+  <circle cx="180" cy="260" r="19" fill="none" stroke="#7c6949" stroke-width="5"/>
+  <path d="M180 279 V320 M160 300 H200" stroke="#7c6949" stroke-width="6" stroke-linecap="round"/>
+
+  <path d="M40 40 h280" stroke="#eadfc9" stroke-width="0.9" opacity="0.55"/>
+  <path d="M40 500 h280" stroke="#eadfc9" stroke-width="0.9" opacity="0.55"/>
+  <path d="M40 40 v460" stroke="#eadfc9" stroke-width="0.9" opacity="0.55"/>
+  <path d="M320 40 v460" stroke="#eadfc9" stroke-width="0.9" opacity="0.55"/>
+
+  <text x="180" y="490" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="25" letter-spacing="2.4" fill="#171513">THE EMPRESS</text>
+</svg>
