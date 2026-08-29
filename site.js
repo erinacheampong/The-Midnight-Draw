@@ -17,6 +17,51 @@ document.addEventListener("DOMContentLoaded", () => {
     .footer-legal a:hover,.footer-legal a:focus-visible{color:#b49356}
     .form-privacy-note{margin:18px 0 0;color:#69625b;font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.6;text-align:center}
     .form-privacy-note a{text-underline-offset:3px}
+
+    /* UNIVERSAL PAGE-HERO TYPOGRAPHY */
+    .home-copy h1,
+    .about-intro .serif-title,
+    .draw-hero h1,
+    .faq-copy .serif-title,
+    .contact-hero h1,
+    .gallery-hero .serif-title {
+      font-size:clamp(36px,4.2vw,54px) !important;
+      line-height:1.06 !important;
+      letter-spacing:-.02em !important;
+      font-weight:400 !important;
+    }
+
+    .home-copy .body-copy,
+    .about-intro .body-copy,
+    .draw-hero .lead,
+    .faq-copy .body-copy,
+    .contact-hero .body-copy,
+    .gallery-hero .body-copy {
+      font-size:clamp(15px,1.2vw,17px) !important;
+      line-height:1.6 !important;
+    }
+
+    .home-copy .eyebrow,
+    .about-intro .eyebrow,
+    .draw-hero .eyebrow,
+    .faq-copy .eyebrow,
+    .contact-hero .eyebrow,
+    .gallery-hero .eyebrow {
+      font-size:10px !important;
+      line-height:1.4 !important;
+    }
+
+    @media (max-width:620px){
+      .home-copy h1,
+      .about-intro .serif-title,
+      .draw-hero h1,
+      .faq-copy .serif-title,
+      .contact-hero h1,
+      .gallery-hero .serif-title {
+        font-size:clamp(34px,10vw,42px) !important;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce){
       html{scroll-behavior:auto !important}
       *,*::before,*::after{transition:none !important;animation:none !important}
