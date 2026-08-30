@@ -20,35 +20,50 @@
   <meta name="twitter:title" content="About The Midnight Draw">
   <meta name="twitter:description" content="Meet the reader behind The Midnight Draw, offering thoughtful tarot readings for events throughout Southern California.">
   <meta name="twitter:image" content="https://themidnightdraw.com/midnight-draw-preview.jpg">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
   <style>
-    .about-hero{max-width:var(--max);margin:auto;background:var(--cream);color:var(--ink);padding:28px 5%;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:44px;align-items:start}
-    .about-photo{overflow:hidden;min-width:0}
+    .about-hero{
+      max-width:var(--max);margin:auto;background:var(--cream);color:var(--ink);padding:28px 5%;
+      display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+      grid-template-areas:"photo heading" "photo copy";column-gap:44px;row-gap:16px;align-items:start
+    }
+    .about-heading{grid-area:heading;padding-top:18px;min-width:0}
+    .about-photo{grid-area:photo;overflow:hidden;min-width:0}
+    .about-copy-text{grid-area:copy;min-width:0}
     .about-photo img{width:100%;height:auto;aspect-ratio:4/5;max-height:620px;object-fit:cover;object-position:center 18%;display:block}
-    .about-intro{padding:18px 0 0;min-width:0}
-    .about-intro .body-copy{max-width:640px}
+    .about-copy-text .body-copy{max-width:640px}
 
     @media(max-width:950px){
-      .about-hero{display:grid !important;grid-template-columns:1fr !important;gap:26px !important;padding:28px 5% 42px !important;align-items:start !important}
+      .about-hero{
+        display:grid !important;grid-template-columns:1fr !important;
+        grid-template-areas:"heading" "photo" "copy" !important;
+        gap:24px !important;padding:28px 5% 42px !important;align-items:start !important
+      }
+      .about-heading{width:100% !important;padding:0 !important}
       .about-photo{width:100% !important;min-height:0 !important;overflow:hidden !important}
       .about-photo img{width:100% !important;height:auto !important;min-height:0 !important;max-height:none !important;aspect-ratio:auto !important;object-fit:cover !important;object-position:center 18% !important}
-      .about-intro{width:100% !important;padding:0 !important}
-      .about-intro .body-copy{max-width:100% !important}
+      .about-copy-text{width:100% !important}
+      .about-copy-text .body-copy{max-width:100% !important}
     }
 
     @media(max-width:620px){
-      .about-hero{padding:22px 22px 36px !important;gap:24px !important}
+      .about-hero{padding:22px 22px 36px !important;gap:22px !important}
+      .about-heading .serif-title{font-size:clamp(44px,14vw,58px) !important;line-height:.98 !important}
+      .about-heading .eyebrow{margin-bottom:10px !important}
       .about-photo img{aspect-ratio:4/5 !important;object-fit:cover !important;object-position:center 18% !important}
-      .about-intro .serif-title{font-size:clamp(44px,14vw,58px) !important;line-height:.98 !important}
-      .about-intro .eyebrow{margin-bottom:10px !important}
-      .about-intro .body-copy{font-size:16px !important;line-height:1.68 !important;margin-top:18px !important}
+      .about-copy-text .body-copy{font-size:16px !important;line-height:1.68 !important;margin-top:18px !important}
+      .about-copy-text .body-copy:first-child{margin-top:0 !important}
     }
   </style>
 </head>
 <body>
 <header class="site-header"><div class="header-inner"><a class="brand-lockup" href="index.html" aria-label="The Midnight Draw home"><span class="brand-name">The Midnight Draw</span><span class="brand-subtitle">Tarot Readings</span></a><nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html" class="active">About</a><a href="draw.html">The Draw</a><a href="gallery.html">Gallery</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav></div></header>
 <main>
-  <section class="about-hero"><div class="about-photo"><img src="about-erin.jpg" alt="Reader behind The Midnight Draw holding The Star tarot card" fetchpriority="high" decoding="async"></div><div class="about-intro"><p class="eyebrow">About The Midnight Draw</p><h1 class="serif-title">Meet the Reader</h1><p class="body-copy">I’m Erin, the reader behind The Midnight Draw.</p><p class="body-copy"><strong>Born on the winter solstice,</strong> I have always been drawn to the in between moments. The shift from dark to light. Intuition before explanation. The feeling that there is often more happening beneath the surface than we immediately see.</p><p class="body-copy">What began as a personal practice grew into a way to create meaningful, memorable moments for other people. Today, I bring thoughtful tarot readings to private celebrations, seasonal gatherings, markets, special events, and brand activations throughout Los Angeles, Orange County, and Southern California.</p></div></section>
+  <section class="about-hero">
+    <div class="about-heading"><p class="eyebrow">About The Midnight Draw</p><h1 class="serif-title">Meet the Reader</h1></div>
+    <div class="about-photo"><img src="about-erin.jpg" alt="Reader behind The Midnight Draw holding The Star tarot card" fetchpriority="high" decoding="async"></div>
+    <div class="about-copy-text"><p class="body-copy">I’m Erin, the reader behind The Midnight Draw.</p><p class="body-copy"><strong>Born on the winter solstice,</strong> I have always been drawn to the in between moments. The shift from dark to light. Intuition before explanation. The feeling that there is often more happening beneath the surface than we immediately see.</p><p class="body-copy">What began as a personal practice grew into a way to create meaningful, memorable moments for other people. Today, I bring thoughtful tarot readings to private celebrations, seasonal gatherings, markets, special events, and brand activations throughout Los Angeles, Orange County, and Southern California.</p></div>
+  </section>
   <section class="about-apart"><h2>What Sets The Midnight Draw Apart</h2><div class="apart-grid"><div class="apart-item"><h3>Approachable</h3><p class="body-copy">You do not need to know anything about tarot before sitting down for a reading.</p></div><div class="apart-item"><h3>Made for Events</h3><p class="body-copy">Readings are designed to feel like part of the gathering rather than taking it over.</p></div><div class="apart-item"><h3>Reflective, Not Predictive</h3><p class="body-copy">The cards offer perspective, not instructions. Your choices remain your own.</p></div><div class="apart-item"><h3>Personal & Conversational</h3><p class="body-copy">Every guest gets an individual experience, even within a larger event.</p></div></div></section>
   <section class="welcome"><h2>Everyone Is Welcome</h2><p class="body-copy">The Midnight Draw welcomes people of all faiths, genders, identities, preferences, and backgrounds. Every reading is held as a respectful, inclusive, and nonjudgmental space.</p></section>
   <section class="gatherings"><h2>Designed for Gatherings</h2><p class="body-copy">A reading at an event should feel like a small moment inside the larger evening. I pay attention to the full experience around the cards too: setup, pacing, guest flow, and how the reading space fits into the event itself.</p><p class="body-copy" style="color:var(--gold)">The goal is always to create something that feels polished, comfortable, and connected to the gathering you are already creating.</p></section>
