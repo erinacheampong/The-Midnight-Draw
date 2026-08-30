@@ -6,19 +6,41 @@
 <meta name="description" content="The Midnight Draw brings thoughtful, approachable tarot readings to private events, girls nights, themed gatherings, brand activations and celebrations throughout Southern California.">
 <meta name="robots" content="index,follow"><link rel="canonical" href="https://themidnightdraw.com/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="The Midnight Draw"><meta property="og:title" content="The Midnight Draw | Tarot Readings"><meta property="og:description" content="Thoughtful tarot readings designed to feel like part of the evening."><meta property="og:url" content="https://themidnightdraw.com/"><meta property="og:image" content="https://themidnightdraw.com/home-hero-new.jpg"><meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=6">
 <style>
 .home-final{background:#f5f0e6;padding:64px 5% 72px;text-align:center}.home-final-inner{max-width:780px;margin:auto;border:1px solid rgba(180,147,86,.45);padding:44px 30px}.home-final h2{margin:0;font-size:clamp(34px,4vw,52px);font-weight:400}.home-final p{max-width:590px;margin:15px auto 24px}.home-final .btn{min-width:220px}
-.home-hero{background-color:#050407;background-image:linear-gradient(90deg,rgba(5,4,7,.94) 0%,rgba(5,4,7,.80) 24%,rgba(5,4,7,.34) 45%,rgba(5,4,7,.06) 67%),url('home-hero-new.jpg?v=5');background-size:68% auto;background-position:58% center;background-repeat:no-repeat;color:#f5f0e6;min-height:590px;display:flex;align-items:center}.home-hero-inner{width:100%;max-width:var(--max);margin:auto;padding:64px 5%;display:block;background:transparent}.home-copy{max-width:520px;background:transparent}.home-copy h1{margin:0;font-size:clamp(40px,4.1vw,58px);line-height:1.03;font-weight:400}.home-copy p{margin:18px 0 0;max-width:500px;color:rgba(245,240,230,.9)}.home-copy .btn{margin-top:26px}
-@media(max-width:1200px){.home-hero{background-size:76% auto;background-position:60% center}.home-hero-inner{padding-left:6%;padding-right:6%}.home-copy{max-width:470px}.home-copy h1{font-size:clamp(38px,4.8vw,54px)}}
-@media(max-width:900px){.home-hero{min-height:520px;background-size:auto 100%;background-position:64% center;background-image:linear-gradient(90deg,rgba(5,4,7,.94) 0%,rgba(5,4,7,.82) 40%,rgba(5,4,7,.26) 74%),url('home-hero-new.jpg?v=5')}.home-hero-inner{padding:54px 6%}.home-copy{max-width:470px}}
-@media(max-width:620px){.home-hero{min-height:560px;align-items:flex-end;background-size:auto 100%;background-position:64% center;background-image:linear-gradient(180deg,rgba(5,4,7,.10) 0%,rgba(5,4,7,.30) 42%,rgba(5,4,7,.92) 75%,rgba(5,4,7,.98) 100%),url('home-hero-new.jpg?v=5')}.home-hero-inner{padding:38px 22px 42px}.home-copy{max-width:100%}.home-copy h1{font-size:clamp(36px,10vw,46px)}.home-copy p{font-size:14px}.home-copy .btn{margin-top:20px}}
+
+/* Homepage hero: clean two-column desktop, true stacked mobile */
+.home-hero{background:#050407;color:#f5f0e6}
+.home-hero-inner{max-width:var(--max);margin:auto;padding:54px 5%;display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:52px;align-items:center}
+.home-copy{max-width:520px}
+.home-copy h1{margin:0;font-size:clamp(40px,4.4vw,60px);line-height:1.03;font-weight:400}
+.home-copy p{margin:18px 0 0;max-width:500px;color:rgba(245,240,230,.9)}
+.home-copy .btn{margin-top:26px}
+.home-hero-photo{width:100%;min-width:0;overflow:hidden}
+.home-hero-photo img{display:block;width:100%;height:520px;object-fit:cover;object-position:left center}
+
+@media(max-width:950px){
+  .home-hero-inner{display:flex;flex-direction:column;align-items:stretch;gap:30px;padding:42px 5% 0}
+  .home-copy{max-width:100%;order:1}
+  .home-hero-photo{order:2;width:100%;overflow:hidden}
+  .home-hero-photo img{width:100%;height:auto;max-height:none;aspect-ratio:4/3;object-fit:cover;object-position:left center}
+}
+
+@media(max-width:620px){
+  .home-hero-inner{padding:34px 22px 0;gap:26px}
+  .home-copy h1{font-size:clamp(40px,12vw,52px)}
+  .home-copy p{font-size:15px;line-height:1.65}
+  .home-copy .btn{margin-top:20px}
+  .home-hero-photo{margin-left:-22px;width:calc(100% + 44px)}
+  .home-hero-photo img{aspect-ratio:1/1;object-position:left center}
+}
 </style>
 </head>
 <body>
 <header class="site-header"><div class="header-inner"><a class="brand-lockup" href="index.html" aria-label="The Midnight Draw home"><span class="brand-name">The Midnight Draw</span><span class="brand-subtitle">Tarot Readings</span></a><nav class="main-nav" aria-label="Main navigation"><a href="index.html" class="active">Home</a><a href="about.html">About</a><a href="draw.html">The Draw</a><a href="gallery.html">Gallery</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav></div></header>
 <main>
-<section class="home-hero"><div class="home-hero-inner"><div class="home-copy"><p class="eyebrow">Southern California</p><h1>Bring a little magic to your gathering.</h1><p class="body-copy">Thoughtful tarot readings for private events, girls nights, themed gatherings and celebrations. Personal, reflective and designed to feel like part of the evening.</p><a class="btn" href="contact.html">Booking Inquiry</a></div></div></section>
+<section class="home-hero"><div class="home-hero-inner"><div class="home-copy"><p class="eyebrow">Southern California</p><h1>Bring a little magic to your gathering.</h1><p class="body-copy">Thoughtful tarot readings for private events, girls nights, themed gatherings and celebrations. Personal, reflective and designed to feel like part of the evening.</p><a class="btn" href="contact.html">Booking Inquiry</a></div><div class="home-hero-photo"><img src="home-hero-new.jpg?v=6" alt="The Midnight Draw tarot reading at an event"></div></div></section>
 <section class="home-origin"><div class="split"><div class="split-image"><img src="home-origin.jpg?v=2" alt="Warm editorial tarot details from The Midnight Draw" loading="lazy"></div><div class="split-copy"><p class="eyebrow">The Origin of</p><h2>The Midnight Draw</h2><p class="body-copy">The Midnight Draw was created from a lifelong pull toward tarot, intuition and storytelling. Each reading creates a space to pause, reflect and reconnect with what you already know.</p><p class="body-copy">It is less about prediction and more about clarity, conversation and a little magic woven naturally into your event.</p></div></div></section>
 <section class="event-band"><div class="event-band-inner"><h2 class="band-title">Readings for your gathering</h2><div class="event-grid"><div class="event-card"><h3>Private Events</h3><p class="body-copy">Intimate readings for birthdays, dinners and celebrations.</p></div><div class="event-card"><h3>Girls Nights</h3><p class="body-copy">A thoughtful, memorable experience guests can enjoy throughout the evening.</p></div><div class="event-card"><h3>Themed Gatherings</h3><p class="body-copy">Tarot styled to complement the mood and energy you are already creating.</p></div></div></div></section>
 <section class="three-card"><div><p class="eyebrow">A Favorite Spread</p><h2 style="margin:0;font-size:clamp(34px,4vw,52px);font-weight:400">The Three Card Reading</h2><p class="body-copy" style="margin-top:15px">A classic spread that creates room for reflection around what shaped you, what you are navigating now and what may be unfolding next.</p><a class="btn" href="draw.html">Try The Draw</a></div><div><img src="draw-event-new.jpg?v=1" alt="A three card tarot spread from The Midnight Draw" loading="lazy"></div><div class="card-key"><div><strong>Past</strong>The energy or experience that shaped you.</div><div><strong>Present</strong>What you are currently navigating.</div><div><strong>Future</strong>Potential guidance for what is ahead.</div></div></section>
