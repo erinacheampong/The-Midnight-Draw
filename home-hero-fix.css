@@ -1,34 +1,70 @@
 /* Homepage hero layout correction */
 
-/* Desktop: two clean columns, with the photo crop biased left so the lamp remains visible. */
+/* Desktop: use the approved image as one full-bleed hero, with copy over the dark left side. */
 @media (min-width:951px){
-  .home-hero-inner{
-    display:grid !important;
-    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) !important;
-    gap:56px !important;
-    align-items:center !important;
-  }
-  .home-copy{
+  .home-hero{
     position:relative !important;
-    z-index:2 !important;
-  }
-  .home-hero-photo{
-    position:relative !important;
-    width:100% !important;
-    min-width:0 !important;
+    background:#09080b !important;
     overflow:hidden !important;
   }
+
+  .home-hero-inner{
+    position:relative !important;
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    min-height:650px !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  .home-hero-photo{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    overflow:hidden !important;
+    z-index:0 !important;
+  }
+
   .home-hero-photo img{
     display:block !important;
     width:100% !important;
-    height:500px !important;
+    height:100% !important;
     max-height:none !important;
     object-fit:cover !important;
-    object-position:left center !important;
+    object-position:center center !important;
+  }
+
+  .home-hero-inner::after{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:1 !important;
+    pointer-events:none !important;
+    background:linear-gradient(90deg,rgba(9,8,11,.88) 0%,rgba(9,8,11,.72) 26%,rgba(9,8,11,.22) 48%,rgba(9,8,11,0) 68%) !important;
+  }
+
+  .home-copy{
+    position:relative !important;
+    z-index:2 !important;
+    width:min(520px,38vw) !important;
+    padding-top:165px !important;
+    margin-left:max(72px,11.5vw) !important;
+  }
+
+  .home-copy h1{
+    font-size:clamp(54px,4.7vw,76px) !important;
+    line-height:1.02 !important;
+    max-width:520px !important;
+  }
+
+  .home-copy p{
+    max-width:500px !important;
   }
 }
 
-/* Tablet and mobile: text and image are separate stacked blocks, never overlaid. */
+/* Tablet and mobile: text and image remain separate stacked blocks for readability. */
 @media (max-width:950px){
   .home-hero-inner{
     display:flex !important;
@@ -65,7 +101,7 @@
     max-height:none !important;
     aspect-ratio:4 / 3 !important;
     object-fit:cover !important;
-    object-position:left center !important;
+    object-position:center center !important;
     opacity:1 !important;
   }
 }
