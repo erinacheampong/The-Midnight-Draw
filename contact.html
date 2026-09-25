@@ -36,19 +36,13 @@
     </div>
     <form id="inquiry-form" action="https://formspree.io/f/xkjwbwgp" method="POST">
       <div class="form-grid">
-        <div class="field"><label for="name">Full Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="name">Your Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
         <div class="field"><label for="email">Email Address</label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" required></div>
-        <div class="field"><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
         <div class="field"><label for="event-date">Event Date</label><input id="event-date" name="event_date" type="date" required></div>
-        <div class="field"><label for="event-time">Event Start Time</label><input id="event-time" name="event_start_time" type="time" required></div>
-        <div class="field"><label for="location">Event Location</label><input id="location" name="event_location" type="text" placeholder="City or venue" autocomplete="address-level2" required></div>
-        <div class="field"><label for="event-type">Type of Event</label><select id="event-type" name="event_type" required><option value="" selected disabled>Select one</option><option>Private Celebration (Birthday, Girls Night)</option><option>Seasonal Gathering</option><option>Market / Pop Up</option><option>Special Event</option><option>Brand Activation / Corporate Event</option><option>Other</option></select></div>
-        <div class="field"><label for="guest-count">Estimated Guest Count</label><input id="guest-count" name="estimated_guest_count" type="number" min="1" inputmode="numeric" required></div>
-        <div class="field"><label for="reading-time">Requested Reading Time</label><select id="reading-time" name="requested_reading_time" required><option value="" selected disabled>Select one</option><option>2 Hours</option><option>3 Hours</option><option>Not Sure Yet</option></select></div>
-        <div class="field"><label for="referral">How did you hear about The Midnight Draw?</label><select id="referral" name="referral_source" required><option value="" selected disabled>Select one</option><option>Instagram</option><option>Google</option><option>Referral</option><option>Event or Market</option><option>Other</option></select></div>
-        <div class="field full"><label for="details">Tell Me About Your Event</label><textarea id="details" name="event_details" placeholder="Share any details, theme, or anything else you'd like me to know." required></textarea></div>
+        <div class="field"><label for="location">Event City</label><input id="location" name="event_location" type="text" placeholder="City where your event will take place" autocomplete="address-level2" required></div>
+        <div class="field full"><label for="details">Tell Me About Your Event</label><textarea id="details" name="event_details" placeholder="What are you celebrating? Share anything you know so far, such as your guest count or timing." required></textarea></div>
       </div>
-      <div class="checkbox-row"><input id="acknowledgement" name="acknowledgement" type="checkbox" value="I understand submitting an inquiry does not reserve my date" required><label for="acknowledgement">I understand that submitting an inquiry does not reserve my date.</label></div>
+      <p class="form-brief-note">You can share the rest of the details when I reply. Sending an inquiry does not reserve your date.</p>
       <input type="hidden" name="_subject" value="New Midnight Draw Event Inquiry">
       <div class="form-actions"><button class="btn" type="submit">Send Inquiry</button></div><div id="form-status" class="form-status" role="status" aria-live="polite"></div>
     </form>

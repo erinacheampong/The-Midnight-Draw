@@ -235,6 +235,7 @@ textarea{min-height:145px;resize:vertical}
 .checkbox-row{display:flex;align-items:flex-start;gap:10px;margin:22px 0}
 .checkbox-row input{width:16px;height:16px;margin-top:2px}
 .checkbox-row label{text-transform:none;letter-spacing:0;color:var(--muted);font-size:12px;line-height:1.5}
+.form-brief-note{margin:20px 0 24px;color:var(--muted);font:14px/1.6 Arial,Helvetica,sans-serif}
 .form-actions{text-align:center}
 .form-status{
   display:none;margin-top:20px;padding:14px;border:1px solid rgba(180,147,86,.42);
