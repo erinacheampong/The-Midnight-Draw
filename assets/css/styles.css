@@ -940,3 +940,8 @@ textarea{
     padding:42px 22px;
   }
 }
+
+/* Additional Skull & Lace gallery detail */
+.gallery-setup-copy{grid-row:1 / span 3}
+.gallery-setup-extra{grid-column:2;grid-row:3;margin-top:32px!important}
+.gallery-setup-extra img{display:block;width:100%;height:auto}
