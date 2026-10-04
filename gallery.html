@@ -26,10 +26,25 @@
     .golden-grid .golden-cards{object-position:30% 72%}
     .golden-grid .golden-table{object-position:55% 35%}
     @media(max-width:620px){.golden-gallery{padding:0 6% 60px}.golden-grid{grid-template-columns:1fr;gap:22px}.golden-grid img{aspect-ratio:4/3}.golden-grid .golden-details{aspect-ratio:4/5}}
-    .skull-lace-photo{grid-column:2;grid-row:2;margin-top:24px!important}
-    .skull-lace-photo img{display:block;width:100%;height:auto}
+    .gallery-setup{padding:64px 5% 72px}
+    .gallery-setup-inner{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+    .gallery-setup-copy{grid-column:1 / -1;grid-row:auto;max-width:760px;margin-bottom:12px}
+    .gallery-setup-copy h2{font-size:clamp(40px,4.5vw,60px)}
+    .gallery-setup-copy .body-copy:last-child{margin-bottom:0}
+    .skull-gallery-title{grid-column:1 / -1;margin:0}
+    .gallery-setup-main{grid-column:1;grid-row:auto}
+    .skull-lace-photo{grid-column:2;grid-row:auto}
+    .gallery-setup-main img,.skull-lace-photo img{display:block;width:100%;height:440px;object-fit:cover}
+    .skull-lace-photo img{object-position:center 62%}
+    @media(max-width:760px){
+      .gallery-setup{padding:48px 6% 56px}
+      .gallery-setup-copy{margin-bottom:32px}
+      .skull-gallery-title{margin-bottom:24px}
+      .skull-lace-photo{margin-top:22px!important}
+      .gallery-setup-main img{height:auto}
+      .skull-lace-photo img{height:auto;object-fit:contain}
+    }
     .gallery-booking-cta{display:table;margin:32px auto 0}
-    .gallery-setup-copy{grid-row:1 / span 3}
   </style>
 </head>
 <body>
@@ -45,8 +60,8 @@
         <p class="body-copy">A dedicated table invites guests to step away from the party for a personal tarot reading. Soft lighting, candles and thoughtful details set the mood.</p>
         <p class="body-copy">The setup can be tailored to complement your event.</p>
       </div>
+      <h2 class="skull-gallery-title" id="skull-title">Skull &amp; Lace</h2>
       <figure class="gallery-setup-main">
-        <h2 class="skull-gallery-title" id="skull-title">Skull &amp; Lace</h2>
         <img src="event-setup-halloween.jpg" alt="The Midnight Draw Skull &amp; Lace reading table, with candles, cards, lighting and guest seating" loading="lazy">
       </figure>
       <figure class="skull-lace-photo"><img src="skull-and-lace-details.jpg" width="1152" height="1536" alt="The Midnight Draw framed tarot sign, candlelight, velvet books and glass orb on skull lace" loading="lazy"></figure>
