@@ -16,6 +16,16 @@
     .gallery-placeholder h2{margin-bottom:34px}
     @media(max-width:900px){.gallery-hero{min-height:252px;padding:16px 22px}}
     @media(max-width:620px){.gallery-hero{min-height:228px;padding:14px 22px}.gallery-placeholder h2{margin-bottom:28px}}
+
+    .golden-gallery{background:var(--cream);padding:0 5% 80px}
+    .golden-gallery-inner{max-width:1180px;margin:auto}
+    .golden-gallery h2{color:#806537;text-transform:uppercase;letter-spacing:.18em;font-size:14px;font-weight:400;margin:0 0 24px}
+    .golden-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .golden-grid figure{margin:0;overflow:hidden}
+    .golden-grid img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+    .golden-grid .golden-cards{object-position:30% 72%}
+    .golden-grid .golden-table{object-position:55% 35%}
+    @media(max-width:620px){.golden-gallery{padding:0 6% 60px}.golden-grid{grid-template-columns:1fr;gap:22px}.golden-grid img{aspect-ratio:4/3}.golden-grid .golden-details{aspect-ratio:4/5}}
   </style>
 </head>
 <body>
@@ -32,10 +42,20 @@
         <p class="body-copy">The setup can be tailored to complement your event.</p>
       </div>
       <figure class="gallery-setup-main">
-        <img src="event-setup-halloween.jpg" alt="The Midnight Draw tarot reading table at a Halloween event, with candles, cards, lighting and guest seating" loading="lazy">
-        <figcaption>Halloween event setup</figcaption>
+        <img src="event-setup-halloween.jpg" alt="The Midnight Draw Skull &amp; Lace reading table, with candles, cards, lighting and guest seating" loading="lazy">
+        <figcaption>Skull &amp; Lace</figcaption>
       </figure>
       <a class="btn gallery-setup-cta" href="contact.html">Inquire About Your Event</a>
+    </div>
+  </section>
+  <section class="golden-gallery" aria-labelledby="golden-title">
+    <div class="golden-gallery-inner">
+      <h2 id="golden-title">Golden Enchantment</h2>
+      <div class="golden-grid">
+        <figure><img class="golden-details" src="golden-enchantment-details.webp" width="1001" height="1200" alt="The Midnight Draw framed tarot sign, crystal ball and candlelight on gold velvet" loading="lazy"></figure>
+        <figure><img class="golden-cards" src="golden-enchantment-cards.webp" width="900" height="1200" alt="Black and gold tarot cards displayed on a black velvet pedestal" loading="lazy"></figure>
+        <figure><img class="golden-table" src="golden-enchantment-table.webp" width="1200" height="900" alt="Golden Enchantment reading table with gold covering, candles, tarot cards and guest seating" loading="lazy"></figure>
+      </div>
     </div>
   </section>
   <section class="event-band" aria-labelledby="gallery-types-title"><div class="event-band-inner"><h2 class="band-title" id="gallery-types-title">Designed for Gatherings</h2><div class="event-grid"><article class="event-card"><h3>Private Celebrations</h3><p class="body-copy">Birthdays, girls nights, themed dinners, showers, and intimate gatherings.</p></article><article class="event-card"><h3>Brand &amp; Corporate</h3><p class="body-copy">Guest activations, launches, client experiences, and company gatherings.</p></article><article class="event-card"><h3>Markets &amp; Pop Ups</h3><p class="body-copy">Approachable readings created for steady guest flow and memorable interactions.</p></article></div></div></section>
