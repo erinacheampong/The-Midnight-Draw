@@ -59,27 +59,11 @@
 .event-experience a{display:inline-block;font:12px/1.6 Arial,Helvetica,sans-serif;text-underline-offset:4px;padding:8px 0}
 @media(max-width:760px){.event-experience{padding:44px 22px}.experience-steps{grid-template-columns:1fr;gap:24px}}
 </style>
-<style id="midnight-atmosphere-styles">
-/* Visible smoke stays along the lower hero edge, with no pointer interception. */
-.home-hero{position:relative;isolation:isolate;overflow:hidden}
-.home-hero-inner{position:relative;z-index:1}
-.hero-atmosphere{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden;mask-image:linear-gradient(to bottom,transparent 55%,#000 85%);-webkit-mask-image:linear-gradient(to bottom,transparent 55%,#000 85%)}
-.smoke-wisp{position:absolute;display:block;width:clamp(360px,55vw,780px);height:300px;opacity:.65;filter:blur(16px);border-radius:48%;background:radial-gradient(ellipse at 35% 55%,rgba(234,226,242,.48),transparent 48%),radial-gradient(ellipse at 65% 65%,rgba(192,171,207,.38),transparent 52%);animation:midnight-smoke 18s ease-in-out infinite alternate}
-.smoke-wisp:nth-child(1){left:-8%;bottom:-100px;animation-delay:-6s}
-.smoke-wisp:nth-child(2){right:-10%;bottom:-90px;animation-delay:-12s;animation-duration:23s}
-.smoke-wisp:nth-child(3){left:28%;bottom:-160px;animation-delay:-4s;animation-duration:27s;background:radial-gradient(ellipse at 50% 50%,rgba(226,213,185,.38),transparent 60%)}
-@keyframes midnight-smoke{0%{opacity:.45;transform:translate3d(-4%,25px,0) rotate(-6deg) scale(.95)}50%{opacity:.8}100%{opacity:.6;transform:translate3d(7%,-35px,0) rotate(7deg) scale(1.12)}}
-.atmosphere-toggle{position:absolute;z-index:3;right:20px;bottom:12px;background:#09080b;color:#d6cfc3;border:1px solid rgba(180,147,86,.4);padding:9px 12px;font:11px/1.4 Arial,Helvetica,sans-serif;cursor:pointer}
-.atmosphere-toggle:hover{color:#f5f0e6;border-color:#b49356}
-.home-hero.atmosphere-paused .smoke-wisp{animation-play-state:paused}
-@media(max-width:950px){.smoke-wisp{width:420px;height:260px;filter:blur(12px)}.smoke-wisp:nth-child(1){left:-90px;bottom:-80px}.smoke-wisp:nth-child(2){right:-100px;bottom:-100px}.smoke-wisp:nth-child(3){left:12%;bottom:-140px}.home-hero-inner{padding-bottom:48px}.atmosphere-toggle{right:14px;bottom:10px}}
-@media(prefers-reduced-motion:reduce){.atmosphere-toggle{display:none}.smoke-wisp{animation:none;opacity:.5}}
-</style>
 </head>
 <body>
 <header class="site-header"><div class="header-inner"><a class="brand-lockup" href="index.html" aria-label="The Midnight Draw home"><span class="brand-name">The Midnight Draw</span><span class="brand-subtitle">Tarot Readings</span></a><nav class="main-nav" aria-label="Main navigation"><a href="index.html" class="active">Home</a><a href="about.html">About</a><a href="draw.html">The Draw</a><a href="gallery.html">Gallery</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav></div></header>
 <main>
-<section class="home-hero"><div class="hero-atmosphere" aria-hidden="true"><span class="smoke-wisp"></span><span class="smoke-wisp"></span><span class="smoke-wisp"></span></div><button class="atmosphere-toggle" type="button" aria-label="Pause smoke animation" aria-pressed="false">Pause atmosphere</button><div class="home-hero-inner"><div class="home-copy"><p class="eyebrow">Southern California</p><h1>Bring a little magic to your gathering.</h1><p class="body-copy">Thoughtful tarot readings for private events, girls nights, themed gatherings and celebrations. Personal, reflective and designed to feel like part of the evening.</p><a class="btn" href="contact.html">Booking Inquiry</a></div><div class="home-hero-photo"><img src="home-hero-new.jpg?v=7" alt="The Midnight Draw tarot reading at an event"></div></div></section>
+<section class="home-hero"><div class="home-hero-inner"><div class="home-copy"><p class="eyebrow">Southern California</p><h1>Bring a little magic to your gathering.</h1><p class="body-copy">Thoughtful tarot readings for private events, girls nights, themed gatherings and celebrations. Personal, reflective and designed to feel like part of the evening.</p><a class="btn" href="contact.html">Booking Inquiry</a></div><div class="home-hero-photo"><img src="home-hero-new.jpg?v=7" alt="The Midnight Draw tarot reading at an event"></div></div></section>
 <section class="home-origin"><div class="split"><div class="split-image"><img src="home-origin.jpg?v=2" alt="Warm editorial tarot details from The Midnight Draw" loading="lazy"></div><div class="split-copy"><p class="eyebrow">The Origin of</p><h2>The Midnight Draw</h2><p class="body-copy">The Midnight Draw was created from a lifelong pull toward tarot, intuition and storytelling. Each reading creates a space to pause, reflect and reconnect with what you already know.</p><p class="body-copy">It is less about prediction and more about clarity, conversation and a little magic woven naturally into your event.</p></div></div></section>
 <section class="event-band"><div class="event-band-inner"><h2 class="band-title">Readings for your gathering</h2><div class="event-grid"><div class="event-card"><h3>Private Events</h3><p class="body-copy">Intimate readings for birthdays, dinners and celebrations.</p></div><div class="event-card"><h3>Girls Nights</h3><p class="body-copy">A thoughtful, memorable experience guests can enjoy throughout the evening.</p></div><div class="event-card"><h3>Themed Gatherings</h3><p class="body-copy">Tarot styled to complement the mood and energy you are already creating.</p></div></div></div></section>
 <section class="event-experience" aria-labelledby="event-experience-title"><div class="event-experience-inner">
@@ -98,16 +82,4 @@
 </main>
 <footer class="site-footer"><p class="footer-title">Let’s Connect</p><a class="instagram-link" href="https://www.instagram.com/themidnightdraw/" target="_blank" rel="noopener">@themidnightdraw</a><p class="copyright">© 2026 The Midnight Draw. All rights reserved.</p></footer>
 <script src="site.js"></script>
-<script>
-(function(){
-const hero=document.querySelector('.home-hero');
-const toggle=hero.querySelector('.atmosphere-toggle');
-toggle.addEventListener('click',function(){
-const paused=hero.classList.toggle('atmosphere-paused');
-toggle.setAttribute('aria-pressed',String(paused));
-toggle.setAttribute('aria-label',paused?'Resume smoke animation':'Pause smoke animation');
-toggle.textContent=paused?'Resume atmosphere':'Pause atmosphere';
-});
-})();
-</script>
 </body></html>
