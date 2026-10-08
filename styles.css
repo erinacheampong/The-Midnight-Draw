@@ -311,3 +311,9 @@ textarea{min-height:145px;resize:vertical}
   .form-shell{padding:28px 18px}
   .about-intro{padding:42px 22px}
 }
+
+/* Prominent booking CTA in homepage navigation */
+.main-nav a.nav-book-now{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;background:var(--black);color:var(--cream);border:1px solid var(--gold);padding:12px 18px;font-weight:600;letter-spacing:.08em;transition:background .2s,color .2s}
+.main-nav a.nav-book-now:hover,.main-nav a.nav-book-now:focus-visible{background:var(--gold);color:var(--black);border-color:var(--gold)}
+@media(max-width:760px){.main-nav a.nav-book-now{padding:11px 15px;font-size:10px}}
+@media(max-width:520px){.main-nav a.nav-book-now{width:100%;min-height:42px;margin-top:7px;font-size:11px}}
