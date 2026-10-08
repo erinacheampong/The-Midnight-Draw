@@ -60,20 +60,20 @@
 @media(max-width:760px){.event-experience{padding:44px 22px}.experience-steps{grid-template-columns:1fr;gap:24px}}
 </style>
 <style id="midnight-atmosphere-styles">
-/* Soft edge wisps sit behind the hero content and never receive clicks. */
+/* Visible smoke stays along the lower hero edge, with no pointer interception. */
 .home-hero{position:relative;isolation:isolate;overflow:hidden}
 .home-hero-inner{position:relative;z-index:1}
-.hero-atmosphere{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.smoke-wisp{position:absolute;display:block;width:clamp(230px,38vw,580px);height:clamp(330px,48vw,680px);opacity:0;filter:blur(28px);border-radius:48%;background:radial-gradient(ellipse at 46% 60%,rgba(224,215,233,.18),rgba(158,139,176,.08) 32%,transparent 66%);animation:midnight-smoke 24s ease-in-out infinite}
-.smoke-wisp:nth-child(1){left:-20%;bottom:-56%;animation-delay:-9s}
-.smoke-wisp:nth-child(2){right:-22%;bottom:-45%;animation-delay:-17s;animation-duration:29s}
-.smoke-wisp:nth-child(3){left:-15%;top:-50%;animation-delay:-4s;animation-duration:32s;background:radial-gradient(ellipse at 50% 60%,rgba(207,190,154,.13),transparent 62%)}
-@keyframes midnight-smoke{0%{opacity:0;transform:translate3d(0,16%,0) rotate(-12deg) scale(.85)}25%{opacity:.75}65%{opacity:.5}100%{opacity:0;transform:translate3d(12%,-28%,0) rotate(14deg) scale(1.18)}}
-.atmosphere-toggle{position:absolute;z-index:2;right:20px;bottom:12px;background:#09080b;color:#d6cfc3;border:1px solid rgba(180,147,86,.4);padding:9px 12px;font:11px/1.4 Arial,Helvetica,sans-serif;cursor:pointer}
+.hero-atmosphere{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden;mask-image:linear-gradient(to bottom,transparent 55%,#000 85%);-webkit-mask-image:linear-gradient(to bottom,transparent 55%,#000 85%)}
+.smoke-wisp{position:absolute;display:block;width:clamp(360px,55vw,780px);height:300px;opacity:.65;filter:blur(16px);border-radius:48%;background:radial-gradient(ellipse at 35% 55%,rgba(234,226,242,.48),transparent 48%),radial-gradient(ellipse at 65% 65%,rgba(192,171,207,.38),transparent 52%);animation:midnight-smoke 18s ease-in-out infinite alternate}
+.smoke-wisp:nth-child(1){left:-8%;bottom:-100px;animation-delay:-6s}
+.smoke-wisp:nth-child(2){right:-10%;bottom:-90px;animation-delay:-12s;animation-duration:23s}
+.smoke-wisp:nth-child(3){left:28%;bottom:-160px;animation-delay:-4s;animation-duration:27s;background:radial-gradient(ellipse at 50% 50%,rgba(226,213,185,.38),transparent 60%)}
+@keyframes midnight-smoke{0%{opacity:.45;transform:translate3d(-4%,25px,0) rotate(-6deg) scale(.95)}50%{opacity:.8}100%{opacity:.6;transform:translate3d(7%,-35px,0) rotate(7deg) scale(1.12)}}
+.atmosphere-toggle{position:absolute;z-index:3;right:20px;bottom:12px;background:#09080b;color:#d6cfc3;border:1px solid rgba(180,147,86,.4);padding:9px 12px;font:11px/1.4 Arial,Helvetica,sans-serif;cursor:pointer}
 .atmosphere-toggle:hover{color:#f5f0e6;border-color:#b49356}
 .home-hero.atmosphere-paused .smoke-wisp{animation-play-state:paused}
-@media(max-width:950px){.smoke-wisp{width:280px;height:420px;filter:blur(22px)}.smoke-wisp:nth-child(1){left:-180px;bottom:24%}.smoke-wisp:nth-child(2){right:-190px;bottom:30%}.home-hero-inner{padding-bottom:48px}.atmosphere-toggle{right:14px;bottom:10px}}
-@media(prefers-reduced-motion:reduce){.hero-atmosphere,.atmosphere-toggle{display:none}.smoke-wisp{animation:none}}
+@media(max-width:950px){.smoke-wisp{width:420px;height:260px;filter:blur(12px)}.smoke-wisp:nth-child(1){left:-90px;bottom:-80px}.smoke-wisp:nth-child(2){right:-100px;bottom:-100px}.smoke-wisp:nth-child(3){left:12%;bottom:-140px}.home-hero-inner{padding-bottom:48px}.atmosphere-toggle{right:14px;bottom:10px}}
+@media(prefers-reduced-motion:reduce){.atmosphere-toggle{display:none}.smoke-wisp{animation:none;opacity:.5}}
 </style>
 </head>
 <body>
