@@ -23,13 +23,25 @@
     .contact-alt a:hover,.contact-alt a:focus-visible{color:var(--ink)}
     @media(max-width:950px){.contact-hero-inner{padding:16px 5%;gap:18px}.contact-hero-inner>div:last-child{min-height:220px}.contact-hero img{height:220px;min-height:220px;max-height:none;object-fit:cover}}
     @media(max-width:620px){.contact-hero-inner{padding:14px 22px}.contact-hero-inner>div:last-child{min-height:200px}.contact-hero img{height:200px;min-height:200px;object-fit:cover}.contact-alt{margin:10px auto 28px;padding:0 8px}.contact-alt .nostalgia-line{font-size:18px}.contact-alt .call-text{font-size:11px;line-height:1.6}}
-  </style>
+  
+/* Crystal ball booking banner */
+.clarity-banner{position:relative;isolation:isolate;overflow:hidden;background:#171313;color:#f5f0e6;min-height:420px;display:grid;align-items:center}
+.clarity-banner-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2}
+.clarity-banner:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,8,11,.65),rgba(9,8,11,.32) 48%,transparent 75%)}
+.clarity-banner-copy{width:min(1180px,90%);margin:auto;padding:72px 0}
+.clarity-banner h1{max-width:500px;font-weight:400;font-size:clamp(38px,4.5vw,60px);line-height:1.1;margin:0 0 28px;color:inherit}
+.clarity-banner .btn{display:inline-block;background:#f5f0e6;color:#171313;border:1px solid #f5f0e6}
+.clarity-banner .btn:focus-visible{outline:3px solid #f5f0e6;outline-offset:5px}
+#event-inquiry{scroll-margin-top:110px}
+@media(max-width:620px){.clarity-banner{display:block;min-height:0}.clarity-banner-photo{position:relative;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;z-index:auto}.clarity-banner:before{display:none}.clarity-banner-copy{width:auto;padding:30px 22px 36px}.clarity-banner h1{font-size:38px;max-width:350px;margin-bottom:24px}}
+
+</style>
 <style>.form-grid select{display:block;width:100%;min-height:46px;padding:11px 12px;background:#fffdf9;border:1px solid #bfb2a2;color:#171417;font:16px Arial,Helvetica,sans-serif}</style></head>
 <body>
 <header class="site-header"><div class="header-inner"><a class="brand-lockup" href="index.html" aria-label="The Midnight Draw home"><span class="brand-name">The Midnight Draw</span><span class="brand-subtitle">Tarot Readings</span></a><nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="draw.html">The Draw</a><a href="gallery.html">Gallery</a><a href="faq.html">FAQ</a><a class="nav-book-now active" href="contact.html">Book Now</a></nav></div></header>
 <main>
-  <section class="contact-hero"><div class="contact-hero-inner"><div><h1>Let’s bring a little magic to your next gathering.</h1><p class="body-copy">Tell me a little about your event. The Midnight Draw is available for gatherings throughout Los Angeles, Orange County, and Southern California.</p></div><div><img src="contact-hero.jpg" alt="Deep brown hands arranging tarot cards" fetchpriority="high" decoding="async"></div></div></section>
-  <section class="contact-main"><div class="form-shell"><h2 class="form-title">Inquire About Your Event</h2>
+  <section class="clarity-banner" aria-labelledby="clarity-heading"><img class="clarity-banner-photo" src="clarity-after-dark.webp" width="1672" height="941" alt="Clear crystal ball on a black stand beside pillar candles and a red velvet book on skull lace" fetchpriority="high" decoding="async"><div class="clarity-banner-copy"><h1 id="clarity-heading">A little clarity after dark.</h1><a class="btn" href="#event-inquiry">Book Your Event</a></div></section>
+  <section class="contact-main" id="event-inquiry"><div class="form-shell"><h2 class="form-title">Inquire About Your Event</h2>
     <div class="contact-alt">
       <p class="nostalgia-line">Prefer a little old school magic?</p>
       <p class="call-text">Call or text <a href="tel:+13239100789">(323) 910-0789</a></p>
