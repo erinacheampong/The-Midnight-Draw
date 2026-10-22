@@ -453,3 +453,31 @@ textarea{min-height:145px;resize:vertical}
 .main-nav a.nav-book-now:hover,.main-nav a.nav-book-now:focus-visible{background:var(--gold);color:var(--black)}
 @media(max-width:760px){.main-nav a.nav-book-now{font-size:10px;padding:11px 15px}}
 @media(max-width:520px){.main-nav a.nav-book-now{width:100%;min-height:42px;margin-top:7px;font-size:11px}}
+
+/* New Year campaign: shared booking bar and homepage feature. */
+.booking-announcement{background:var(--black);color:var(--cream);border-bottom:1px solid var(--gold)}
+.booking-announcement-inner{max-width:var(--max);margin:auto;padding:8px 5%;display:flex;justify-content:center;align-items:center;gap:24px}
+.booking-announcement p{margin:0;font-size:16px;line-height:1.4}
+.booking-announcement .btn{padding:9px 18px;flex-shrink:0;color:var(--cream)}
+.booking-announcement .btn:hover,.booking-announcement .btn:focus-visible{color:var(--black)}
+.new-year-feature{background:var(--cream);padding:70px 5% 0}
+.new-year-card{max-width:1260px;margin:0 auto;min-height:300px;background:var(--black) url('new-year-velvet.webp') left center/cover no-repeat;display:flex;align-items:center;justify-content:flex-end;color:var(--cream)}
+.new-year-copy{width:44%;padding:30px 36px;text-align:center}
+.new-year-copy h2{font-size:clamp(32px,3.6vw,48px);line-height:1.05;font-weight:400;margin:0}
+.new-year-copy h2 em{font-weight:400}
+.new-year-copy p{font-size:clamp(16px,1.6vw,21px);line-height:1.4;margin:14px 0 22px}
+.new-year-copy .btn{min-width:210px;color:var(--cream)}
+.new-year-copy .btn:hover,.new-year-copy .btn:focus-visible{color:var(--black)}
+.new-year-feature+.home-origin .split{padding-top:70px}
+@media(max-width:760px){
+ .booking-announcement-inner{padding:10px 20px;gap:12px}
+ .booking-announcement p{font-size:14px;max-width:240px}
+ .booking-announcement .btn{font-size:10px;padding:10px 12px}
+ .new-year-feature{padding:44px 22px 0}
+ .new-year-card{min-height:430px;background-size:auto 250px;background-position:left top;align-items:flex-end;background-repeat:no-repeat}
+ .new-year-copy{width:100%;padding:34px 18px 30px;background:linear-gradient(180deg,rgba(9,8,11,0),var(--black) 20%)}
+ .new-year-copy h2{font-size:36px}
+ .new-year-copy p{font-size:17px;margin:12px 0 22px}
+ .new-year-feature+.home-origin .split{padding-top:44px}
+}
+@media(max-width:380px){.booking-announcement-inner{gap:10px;padding:10px 14px}.booking-announcement p{font-size:12px}.booking-announcement .btn{font-size:9px;padding:10px}}
