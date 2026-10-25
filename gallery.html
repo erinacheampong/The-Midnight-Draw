@@ -12,7 +12,7 @@
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Tarot Event Gallery | The Midnight Draw"><meta name="twitter:description" content="A glimpse into tarot readings and events throughout Southern California."><meta name="twitter:image" content="https://themidnightdraw.com/midnight-draw-preview.jpg">
   <link rel="stylesheet" href="styles.css?v=20261022">
   <style>
-    .gallery-page{max-width:1040px;width:calc(100% - 112px);margin:0 auto}
+    .gallery-page{max-width:1160px;width:calc(100% - 96px);margin:0 auto}
     .gallery-heading{text-align:center;padding:52px 0 36px}
     .gallery-heading h1{font-size:clamp(40px,5vw,58px);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin:0}
     .gallery-wide{margin:0;width:100%;height:clamp(340px,43vw,580px);overflow:hidden;background:var(--black)}
@@ -21,12 +21,12 @@
     .gallery-photo{overflow:hidden;background:var(--cream-2)}
     .gallery-photo img{display:block;width:100%;height:100%;object-fit:cover}
     .editorial-collection h2{text-align:center;font-size:clamp(26px,3vw,36px);font-weight:400;line-height:1.15;letter-spacing:-.02em;margin:0 0 32px}
-    .editorial-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto;grid-template-rows:280px 280px}
+    .editorial-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1008px;margin:0 auto;grid-template-rows:314px 314px}
     .editorial-pair figure{margin:0;min-width:0}
     .editorial-pair figure:first-child{grid-row:1 / span 2}
     .editorial-pair .candle-photo{object-position:center 28%}
     .editorial-pair .tent-photo{object-position:center bottom;transform:scale(1.15);transform-origin:center bottom}
-    .signature-pair{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:840px;margin:76px auto 0;padding-top:56px;border-top:1px solid var(--line)}
+    .signature-pair{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:940px;margin:76px auto 0;padding-top:56px;border-top:1px solid var(--line)}
     .signature-pair .gallery-photo{aspect-ratio:4/5;margin:0}
     .signature-pair h2{font-size:clamp(24px,2.8vw,32px);font-weight:400;line-height:1.15;margin:20px 0 0;letter-spacing:-.02em}
     .signature-pair .skull-detail{object-position:center 65%}
@@ -42,23 +42,18 @@
     .gallery-invitation h2{font-weight:400;font-size:clamp(28px,3.5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 24px}
     .gallery-invitation .btn{border-color:var(--gold);padding:16px 28px}
     @media(max-width:760px){
-      .gallery-page{width:calc(100% - 40px)}
-      .gallery-heading{padding:36px 0 28px}
-      .editorial-pair{gap:16px;grid-template-rows:220px 220px}
+      .gallery-page{width:100%}
+      .gallery-heading{padding:36px 20px 28px}
+      .editorial-collection h2{padding:0 20px}
+      .editorial-pair{max-width:none;grid-template-columns:1fr;grid-template-rows:none;gap:12px}
+      .editorial-pair figure,.editorial-pair figure:first-child{grid-column:auto;grid-row:auto;aspect-ratio:4/5}
       .gallery-wide.table-scene{height:380px}
-      .signature-pair{margin-top:44px;padding-top:36px;gap:20px}
-      .signature-pair h2{font-size:24px;margin-top:16px}
-        .golden-feature{margin-top:28px}
+      .signature-pair{max-width:none;grid-template-columns:1fr;margin-top:32px;padding-top:32px;gap:28px}
+      .signature-pair h2{font-size:26px;margin:16px 20px 0}
+      .golden-feature{margin-top:28px}
       .golden-feature-inner{height:auto;grid-template-columns:1fr;gap:0}
       .golden-feature figure{width:100%;height:420px}
       .golden-feature-copy{width:100%;padding:32px 24px 36px}
-    }
-    @media(max-width:480px){
-      .editorial-pair{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:14px}
-      .editorial-pair figure:first-child{grid-column:1 / -1;grid-row:auto;aspect-ratio:4/5}
-      .editorial-pair figure:not(:first-child){aspect-ratio:4/5}
-      .signature-pair{gap:18px}
-      .signature-pair h2{font-size:21px}
     }
   </style>
 <link rel="stylesheet" href="reviews.css?v=20261025a">
