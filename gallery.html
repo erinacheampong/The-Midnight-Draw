@@ -30,8 +30,14 @@
     .signature-pair .gallery-photo{aspect-ratio:4/5;margin:0}
     .signature-pair h2{font-size:clamp(24px,2.8vw,32px);font-weight:400;line-height:1.15;margin:20px 0 0;letter-spacing:-.02em}
     .signature-pair .skull-detail{object-position:center 65%}
-    .golden-feature{display:flex;align-items:center;justify-content:center;margin:56px 0 0;width:100%;height:clamp(280px,28vw,380px);overflow:hidden;background:var(--cream-2)}
-    .golden-feature img{display:block;width:auto;max-width:100%;height:100%;object-fit:contain}
+    .golden-feature{margin:56px 0 0;width:100%;background:var(--cream-2)}
+    .golden-feature-inner{max-width:1040px;width:calc(100% - 96px);margin:0 auto;padding:48px 0;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .golden-feature figure{margin:0;min-width:0}
+    .golden-feature-copy{max-width:390px}
+    .golden-feature-copy h2{font-size:clamp(30px,3.4vw,42px);font-weight:400;line-height:1.14;letter-spacing:-.02em;margin:0 0 24px}
+    .golden-feature-copy .body-copy{font-size:16px;line-height:1.75;color:var(--muted);margin:0 0 18px}
+    .golden-feature-copy .body-copy:last-child{margin-bottom:0}
+    .golden-feature img{display:block;width:100%;height:auto}
     .gallery-invitation{text-align:center;background:var(--black);color:var(--cream);padding:52px 24px 58px}
     .gallery-invitation h2{font-weight:400;font-size:clamp(28px,3.5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 24px}
     .gallery-invitation .btn{border-color:var(--gold);padding:16px 28px}
@@ -42,7 +48,10 @@
       .gallery-wide.table-scene{height:380px}
       .signature-pair{margin-top:44px;padding-top:36px;gap:20px}
       .signature-pair h2{font-size:24px;margin-top:16px}
-      .golden-feature{display:flex;align-items:center;justify-content:center;margin:56px 0 0;width:100%;height:clamp(280px,28vw,380px);overflow:hidden;background:var(--cream-2)}
+        .golden-feature{margin-top:40px}
+      .golden-feature-inner{width:calc(100% - 40px);grid-template-columns:1fr;gap:30px;padding:32px 0}
+      .golden-feature figure{max-width:440px;margin:0 auto;width:100%}
+      .golden-feature-copy{max-width:520px;margin:auto;width:100%}
     }
     @media(max-width:480px){
       .editorial-pair{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:14px}
@@ -74,7 +83,16 @@
       <section aria-labelledby="golden-title"><figure class="gallery-photo"><img src="golden-enchantment-cards.webp" width="900" height="1200" alt="Black and gold tarot cards fanned across a velvet cushion on gold fabric" loading="lazy"></figure><h2 id="golden-title">Golden Enchantment</h2></section>
     </div>
   </div>
-  <figure class="golden-feature" id="golden-feature"><img src="golden-enchantment-details.webp" width="1001" height="1200" alt="The Midnight Draw framed tarot sign with glowing pillar candles, a black velvet book, and a glass orb on gold velvet" loading="lazy"></figure>
+  <section class="golden-feature" id="golden-feature" aria-labelledby="golden-feature-title">
+    <div class="golden-feature-inner">
+      <figure><img src="golden-enchantment-details.webp" width="1001" height="1200" alt="The Midnight Draw framed tarot sign with glowing pillar candles, a black velvet book, and a glass orb on gold velvet" loading="lazy"></figure>
+      <div class="golden-feature-copy">
+        <h2 id="golden-feature-title">A space for connection.</h2>
+        <p class="body-copy">Warm light, gold textures, and carefully chosen details set the scene for a personal reading.</p>
+        <p class="body-copy">From private celebrations to corporate gatherings, The Midnight Draw offers guests a moment to reflect, gain insight, and connect.</p>
+      </div>
+    </div>
+  </section>
 <section class="review-marquee" id="client-reviews" aria-labelledby="gallery-review-title">
   <h2 id="gallery-review-title">Five Star Client Reviews</h2>
   <div class="review-window" tabindex="0" aria-label="Client reviews. Hover or focus here to pause scrolling."><div class="review-track" aria-live="off"><div class="review-group"><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><h3>“The highlight of the night!”</h3><blockquote><p>I hired Erin for my birthday party of 30 people and it was the highlight of the night! Erin came early to set up and was very thoughtful with everyone’s reading and making sure everyone enjoyed their time. Would highly recommend her for any event 😍</p></blockquote><p class="review-author">Monae k.</p></article><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>The Midnight Draw reading altar was so elaborate and beautiful. I loved my experience, and it was insane how accurate my reading was!</p></blockquote><p class="review-author">Dannile H.</p></article><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>The Midnight Draw reader, Erin, is so spot on. I’ve had readings before, but I loved how she explained all of the card elements.</p></blockquote><p class="review-author">Shawn U.</p></article></div><div class="review-group" aria-hidden="true"><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><h3>“The highlight of the night!”</h3><blockquote><p>I hired Erin for my birthday party of 30 people and it was the highlight of the night! Erin came early to set up and was very thoughtful with everyone’s reading and making sure everyone enjoyed their time. Would highly recommend her for any event 😍</p></blockquote><p class="review-author">Monae k.</p></article><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>The Midnight Draw reading altar was so elaborate and beautiful. I loved my experience, and it was insane how accurate my reading was!</p></blockquote><p class="review-author">Dannile H.</p></article><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>The Midnight Draw reader, Erin, is so spot on. I’ve had readings before, but I loved how she explained all of the card elements.</p></blockquote><p class="review-author">Shawn U.</p></article></div></div></div>
