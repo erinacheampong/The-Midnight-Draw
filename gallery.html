@@ -36,12 +36,13 @@
     .review-marquee{padding:68px 0 72px;overflow:hidden}
     .review-marquee h2{text-align:center;font-weight:400;font-size:clamp(27px,3vw,36px);line-height:1.15;margin:0 20px 42px}
     .review-window{overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent)}
-    .review-track{display:flex;width:max-content;animation:reviews-scroll 60s linear infinite}
+    .review-track{display:flex;width:max-content;animation:reviews-scroll 90s linear infinite}
     .review-group{display:flex;flex-shrink:0}
     .review-card{flex:0 0 auto;width:620px;padding:8px 52px 12px;text-align:center;border-right:1px solid var(--line)}
     .review-card .review-stars{color:#8f6f39;letter-spacing:.2em;font-size:21px;line-height:1;margin:0 0 24px}
     .review-card blockquote{margin:0}
     .review-card blockquote p{font-size:clamp(19px,2vw,24px);line-height:1.55;letter-spacing:-.01em;margin:0 0 24px}
+    .review-note{color:#8f6f39;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;line-height:21px;margin:0 0 24px}
     .review-author{font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.06em;color:var(--muted);margin:0}
     .review-marquee[data-paused="true"] .review-track,.review-window:hover .review-track,.review-window:focus-within .review-track{animation-play-state:paused}
     .review-controls{text-align:center;margin-top:36px}
@@ -62,7 +63,7 @@
       .review-marquee{padding:48px 0 56px}
       .review-card{width:calc(100vw - 44px);max-width:520px;padding:8px 24px 12px}
       .review-marquee h2{margin-bottom:32px}
-      .review-track{animation-duration:52s}
+      .review-track{animation-duration:78s}
     }
     @media(max-width:480px){
       .editorial-pair{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:14px}
@@ -97,7 +98,7 @@
   <figure class="golden-feature" id="golden-feature"><img src="golden-enchantment-details.webp" width="1001" height="1200" alt="The Midnight Draw framed tarot sign with glowing pillar candles, a black velvet book, and a glass orb on gold velvet" loading="lazy"></figure>
   <section class="review-marquee" id="client-reviews" aria-labelledby="gallery-review-title" data-paused="false">
     <h2 id="gallery-review-title">Five Star Client Reviews</h2>
-    <div class="review-window"><div class="review-track" aria-live="off"><div class="review-group"><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>“Erin came early to set up and was very thoughtful with everyone’s reading and making sure everyone enjoyed their time. Would highly recommend her for any event”</p></blockquote><p class="review-author">Monae k.</p></article><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>“The Midnight Draw reading altar was so elaborate and beautiful. I loved my experience, and it was insane how accurate my reading was!”</p></blockquote><p class="review-author">Danielle</p></article></div><div class="review-group" aria-hidden="true"><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>“Erin came early to set up and was very thoughtful with everyone’s reading and making sure everyone enjoyed their time. Would highly recommend her for any event”</p></blockquote><p class="review-author">Monae k.</p></article><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>“The Midnight Draw reading altar was so elaborate and beautiful. I loved my experience, and it was insane how accurate my reading was!”</p></blockquote><p class="review-author">Danielle</p></article></div></div></div>
+    <div class="review-window"><div class="review-track" aria-live="off"><div class="review-group"><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>“Erin came early to set up and was very thoughtful with everyone’s reading and making sure everyone enjoyed their time. Would highly recommend her for any event”</p></blockquote><p class="review-author">Monae k.</p></article><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>“The Midnight Draw reading altar was so elaborate and beautiful. I loved my experience, and it was insane how accurate my reading was!”</p></blockquote><p class="review-author">Dannile H.</p></article><article class="review-card"><p class="review-note">Client Review</p><blockquote><p>“The Midnight Draw reader, Erin, is so spot on. I’ve had readings before, but I loved how she explained all of the card elements.”</p></blockquote><p class="review-author">Shawn U.</p></article></div><div class="review-group" aria-hidden="true"><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>“Erin came early to set up and was very thoughtful with everyone’s reading and making sure everyone enjoyed their time. Would highly recommend her for any event”</p></blockquote><p class="review-author">Monae k.</p></article><article class="review-card"><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>“The Midnight Draw reading altar was so elaborate and beautiful. I loved my experience, and it was insane how accurate my reading was!”</p></blockquote><p class="review-author">Dannile H.</p></article><article class="review-card"><p class="review-note">Client Review</p><blockquote><p>“The Midnight Draw reader, Erin, is so spot on. I’ve had readings before, but I loved how she explained all of the card elements.”</p></blockquote><p class="review-author">Shawn U.</p></article></div></div></div>
     <div class="review-controls"><button class="review-motion-toggle" type="button" aria-pressed="false">Pause reviews</button></div>
   </section>
   <section class="gallery-invitation" aria-labelledby="gallery-invitation-title"><h2 id="gallery-invitation-title">Bring The Midnight Draw to your event.</h2><a class="btn" href="contact.html">Inquire About Your Event</a></section>
