@@ -36,8 +36,9 @@
     .collection-grid figcaption{font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.5;letter-spacing:.035em;color:var(--muted);padding-top:13px}
     .gallery-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:1px solid var(--line);padding:72px 0;gap:64px;align-items:center}
     .gallery-story figure{margin:0;max-width:440px;width:100%}
-    .gallery-story img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center}
+    .gallery-story img{display:block;width:100%;height:auto;object-fit:contain}
     .gallery-story h2{font-weight:400;font-size:clamp(28px,3vw,40px);line-height:1.15;margin:0 0 26px;letter-spacing:-.02em}
+    .gallery-story .review-stars{color:#8f6f39;font-size:22px;letter-spacing:.18em;line-height:1;margin:0 0 24px}
     .gallery-story blockquote{margin:0}
     .gallery-story blockquote p{font-size:clamp(19px,2vw,25px);line-height:1.6;margin:0 0 24px}
     .gallery-story .review-author{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.06em;color:var(--muted);margin:0}
@@ -99,7 +100,7 @@
     </section>
     <section class="gallery-story" aria-labelledby="gallery-review-title">
       <figure><img src="erin-at-reading-table.webp" width="1086" height="1448" alt="Erin smiling and holding tarot cards at The Midnight Draw reading table" loading="lazy"></figure>
-      <div class="gallery-story-copy"><p class="collection-kicker">Kind words</p><h2 id="gallery-review-title">A little space for magic.</h2><blockquote><p>“Erin came early to set up and was very thoughtful with everyone’s reading and making sure everyone enjoyed their time. Would highly recommend her for any event”</p></blockquote><p class="review-author">Monae k.</p></div>
+      <div class="gallery-story-copy"><p class="collection-kicker">Kind words</p><h2 id="gallery-review-title">A little space for magic.</h2><p class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></p><blockquote><p>“Erin came early to set up and was very thoughtful with everyone’s reading and making sure everyone enjoyed their time. Would highly recommend her for any event”</p></blockquote><p class="review-author">Monae k.</p></div>
     </section>
   </div>
   <section class="gallery-invitation" aria-labelledby="gallery-invitation-title"><h2 id="gallery-invitation-title">Make room for connection.</h2><p class="body-copy">Bring The Midnight Draw to your next celebration, gathering, or brand experience.</p><a class="btn" href="contact.html">Inquire About Your Event</a></section>
