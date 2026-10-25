@@ -30,14 +30,14 @@
     .signature-pair .gallery-photo{aspect-ratio:4/5;margin:0}
     .signature-pair h2{font-size:clamp(24px,2.8vw,32px);font-weight:400;line-height:1.15;margin:20px 0 0;letter-spacing:-.02em}
     .signature-pair .skull-detail{object-position:center 65%}
-    .golden-feature{margin:56px 0 0;width:100%;background:var(--cream-2)}
-    .golden-feature-inner{max-width:1040px;width:calc(100% - 96px);margin:0 auto;padding:48px 0;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-    .golden-feature figure{margin:0;min-width:0}
-    .golden-feature-copy{max-width:390px}
+    .golden-feature{margin:32px 0 0;width:100%;background:var(--cream-2)}
+    .golden-feature-inner{width:100%;height:clamp(420px,40vw,540px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;align-items:stretch}
+    .golden-feature figure{margin:0;min-width:0;height:100%;overflow:hidden}
+    .golden-feature-copy{display:flex;flex-direction:column;justify-content:center;padding:40px clamp(32px,5vw,80px)}
     .golden-feature-copy h2{font-size:clamp(30px,3.4vw,42px);font-weight:400;line-height:1.14;letter-spacing:-.02em;margin:0 0 24px}
-    .golden-feature-copy .body-copy{font-size:16px;line-height:1.75;color:var(--muted);margin:0 0 18px}
+    .golden-feature-copy .body-copy{font-size:16px;line-height:1.7;color:#514a43;margin:0 0 18px;max-width:440px}
     .golden-feature-copy .body-copy:last-child{margin-bottom:0}
-    .golden-feature img{display:block;width:100%;height:auto}
+    .golden-feature img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 70%}
     .gallery-invitation{text-align:center;background:var(--black);color:var(--cream);padding:52px 24px 58px}
     .gallery-invitation h2{font-weight:400;font-size:clamp(28px,3.5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 24px}
     .gallery-invitation .btn{border-color:var(--gold);padding:16px 28px}
@@ -48,10 +48,10 @@
       .gallery-wide.table-scene{height:380px}
       .signature-pair{margin-top:44px;padding-top:36px;gap:20px}
       .signature-pair h2{font-size:24px;margin-top:16px}
-        .golden-feature{margin-top:40px}
-      .golden-feature-inner{width:calc(100% - 40px);grid-template-columns:1fr;gap:30px;padding:32px 0}
-      .golden-feature figure{max-width:440px;margin:0 auto;width:100%}
-      .golden-feature-copy{max-width:520px;margin:auto;width:100%}
+        .golden-feature{margin-top:28px}
+      .golden-feature-inner{height:auto;grid-template-columns:1fr;gap:0}
+      .golden-feature figure{width:100%;height:420px}
+      .golden-feature-copy{width:100%;padding:32px 24px 36px}
     }
     @media(max-width:480px){
       .editorial-pair{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:14px}
