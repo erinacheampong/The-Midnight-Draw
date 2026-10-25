@@ -17,6 +17,15 @@
     @media(max-width:900px){.gallery-hero{min-height:252px;padding:16px 22px}}
     @media(max-width:620px){.gallery-hero{min-height:228px;padding:14px 22px}.gallery-placeholder h2{margin-bottom:28px}}
 
+    .stars-gallery{background:var(--cream);padding:48px 5% 64px}
+    .stars-gallery-inner{max-width:1180px;margin:auto}
+    .stars-gallery h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,4.5vw,52px);font-weight:400;line-height:1.15;margin:0 0 18px}
+    .stars-gallery .body-copy{max-width:720px;margin:0 0 30px}
+    .stars-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .stars-grid figure{margin:0;min-width:0}
+    .stars-grid img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+    @media(max-width:760px){.stars-gallery{padding:32px 6% 48px}.stars-grid{grid-template-columns:1fr;gap:22px}}
+
     .golden-gallery{background:var(--cream);padding:0 5% 80px}
     .golden-gallery-inner{max-width:1180px;margin:auto}
     .golden-gallery h2,.skull-gallery-title{color:#806537;text-transform:uppercase;letter-spacing:.18em;font-size:14px;font-weight:400;margin:0 0 24px}
@@ -65,13 +74,25 @@
 <main>
   <section class="gallery-hero"><h1 class="serif-title">Gallery</h1><p class="body-copy">Candlelight, connection and a little midnight magic.</p></section>
 
+  <section class="stars-gallery" aria-labelledby="stars-title">
+    <div class="stars-gallery-inner">
+      <h2 id="stars-title">Tarot Under the Stars</h2>
+      <p class="body-copy">An evening of personal readings, connection, and celebration beneath the stars.</p>
+      <div class="stars-grid">
+        <figure><img src="tarot-under-the-stars-erin.webp" width="1152" height="1536" alt="Erin smiling with tarot cards at her reading table inside a black and white striped tent" fetchpriority="high"></figure>
+        <figure><img src="tarot-under-the-stars-setup.webp" width="1152" height="1536" alt="The Midnight Draw outdoor tarot setup with a striped tent, gold and black table covering, LED candles, and guest seating" loading="lazy"></figure>
+        <figure><img src="tarot-under-the-stars-evening.webp" width="1152" height="1536" alt="The tarot tent at night beneath colorful banners, string lights, and the moon" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
   <section class="gallery-setup" aria-labelledby="skull-title">
     <div class="gallery-setup-inner">
       <div class="gallery-setup-copy">
         <h2 id="setup-title">A little space for magic.</h2>
         <p class="body-copy">Personal tarot readings in a setting styled to complement your event.</p>
       </div>
-      <figure class="gallery-reader-photo"><img src="erin-at-reading-table.webp" width="1086" height="1448" alt="Erin smiling and holding tarot cards at The Midnight Draw reading table" fetchpriority="high"></figure>
+      <figure class="gallery-reader-photo"><img src="erin-at-reading-table.webp" width="1086" height="1448" alt="Erin smiling and holding tarot cards at The Midnight Draw reading table" loading="lazy"></figure>
       <div style="grid-column:1 / -1"><h2 class="skull-gallery-title" id="skull-title">Skull &amp; Lace</h2></div>
       <figure class="gallery-setup-main">
         <img src="event-setup-halloween.jpg" alt="The Midnight Draw Skull &amp; Lace reading table, with candles, cards, lighting and guest seating" loading="lazy">
