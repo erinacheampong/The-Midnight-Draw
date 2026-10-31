@@ -205,6 +205,8 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
 
       const submit = form.querySelector('button[type="submit"]');
+      if (submit.disabled) return;
+      if (!form.checkValidity()) { form.reportValidity(); return; }
       const oldText = submit.textContent;
 
       submit.disabled = true;
@@ -212,9 +214,12 @@ document.addEventListener("DOMContentLoaded", () => {
       status.classList.remove("show");
       status.textContent = "";
 
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 15000);
       try {
         const response = await fetch(form.action, {
           method: "POST",
+          signal: controller.signal,
           body: new FormData(form),
           headers: {
             Accept: "application/json"
@@ -238,6 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
         status.focus();
 
       } finally {
+        clearTimeout(timeout);
         submit.disabled = false;
         submit.textContent = oldText;
       }
@@ -245,3 +251,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
