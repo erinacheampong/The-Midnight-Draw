@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       } catch (error) {
         status.innerHTML =
-          'Something went wrong. Please try again, <a href="mailto:erinacheampong@gmail.com">email Erin</a>, or reach out on <a href="https://www.instagram.com/themidnightdraw/" target="_blank" rel="noopener">Instagram</a>.';
+          'Something went wrong. Please try again, <a href="mailto:erinacheampong@gmail.com">email The Midnight Draw</a>, or reach out on <a href="https://www.instagram.com/themidnightdraw/" target="_blank" rel="noopener">Instagram</a>.';
         status.classList.add("show");
         status.focus();
 
