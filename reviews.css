@@ -11,5 +11,17 @@
 .review-card .review-author{font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5;letter-spacing:.04em;color:#514a43;margin:auto 0 0}
 .review-window:hover .review-track,.review-window:focus-within .review-track{animation-play-state:paused}
 @keyframes reviews-scroll{to{transform:translateX(-50%)}}
-@media(max-width:760px){.review-marquee{padding:48px 0 56px}.review-card{width:calc(100vw - 44px);max-width:520px;padding:8px 24px 12px}.review-marquee h2{margin-bottom:32px}.review-track{animation-duration:80s}}
+@media(max-width:760px){
+  .review-marquee{padding:calc(72px + env(safe-area-inset-top)) 0 52px;scroll-margin-top:24px}
+  .review-marquee h2{max-width:22ch;margin:0 auto 28px;padding:0 22px;box-sizing:border-box;font-size:clamp(23px,6.5vw,30px);line-height:1.15}
+  .review-group{align-items:flex-start}
+  .review-card{width:calc(100vw - 44px);max-width:520px;padding:12px 24px 20px}
+  .review-card.trusted-review-card{justify-content:flex-start;padding-top:12px}
+  .review-card .review-stars{font-size:18px;margin:0 0 18px}
+  .review-card h3{font-size:clamp(21px,5.8vw,25px);line-height:1.2;margin:0 0 16px}
+  .review-card blockquote{margin:0}
+  .review-card blockquote p{font-size:clamp(16px,4.4vw,19px);line-height:1.52}
+  .review-card .review-author{font-size:12px;line-height:1.45;margin:16px 0 0}
+  .review-track{animation-duration:80s}
+}
 @media(prefers-reduced-motion:reduce){.review-track{animation:none;width:100%}.review-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));width:100%;gap:40px}.review-group[aria-hidden="true"]{display:none}.review-card{width:auto;max-width:none;border:0}.review-window{mask-image:none}}
