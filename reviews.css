@@ -7,7 +7,11 @@
 .review-group[aria-hidden="true"]{display:flex}
 .review-window:hover .review-track,.review-window:focus-within .review-track{animation-play-state:paused}
 @keyframes review-scroll{to{transform:translateX(-50%)}}
-.review-card{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;flex:0 0 clamp(310px,31vw,410px);width:clamp(310px,31vw,410px);min-height:440px;margin:0;padding:28px 25px;text-align:center;border:1px solid var(--line)}
+.review-card{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;flex:0 0 clamp(310px,31vw,410px);width:clamp(310px,31vw,410px);min-height:390px;margin:0;padding:24px 24px;text-align:center;border:1px solid var(--line)}
+/* Wider card for the longer Soni W. testimonial keeps the carousel compact. */
+.review-card--long{flex-basis:clamp(540px,50vw,660px);width:clamp(540px,50vw,660px)}
+.review-card--long blockquote{max-width:60ch}
+.review-card--long blockquote p{font-size:17px;line-height:1.48}
 .review-card .review-stars{color:#8f6f39;letter-spacing:.2em;font-size:19px;line-height:1;margin:0 0 16px}
 .review-card h3{font-size:clamp(22px,2.5vw,27px);font-weight:400;line-height:1.2;margin:0 0 14px}
 .review-card blockquote{width:100%;max-width:68ch;margin:0}
@@ -22,7 +26,8 @@
   .review-track{display:block;width:100%;animation:none;will-change:auto}
   .review-group{display:block;width:100%;padding-right:0}
   .review-group[aria-hidden="true"]{display:none}
-  .review-card{width:100%;max-width:860px;min-height:0;margin:0 auto;border:0;border-bottom:1px solid var(--line)}
+  .review-card,.review-card--long{width:100%;max-width:860px;min-height:0;margin:0 auto;border:0;border-bottom:1px solid var(--line)}
+  .review-card--long blockquote p{font-size:clamp(16px,4.4vw,19px);line-height:1.52}
   .review-marquee{padding:34px 22px 22px;scroll-margin-top:24px}
   .review-marquee h2{max-width:22ch;margin:0 auto 20px;padding:0 8px;box-sizing:border-box;font-size:clamp(23px,6.5vw,30px);line-height:1.15}
   .review-card{padding:18px 4px 20px}
